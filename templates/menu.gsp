@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" 
+          <a class="navbar-brand"
                 href = "${content.rootpath?:''}index.html">
             John Flinchbaugh
           </a>
@@ -16,7 +16,6 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>index.html">Home</a></li>
-            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>${config.feed_file}">Subscribe</a></li>
             <li><a href="${content.rootpath ?: ''}${config.archive_file}">Archive</a></li>
             <li class = "dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <b class="caret"></b></a>
@@ -26,6 +25,9 @@
                 <% } %>
               </ul>
             </li>
+        </ul>
+        <ul class = "nav navbar-nav navbar-right">
+            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>${config.feed_file}">Subscribe</a></li>
             <!--
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
