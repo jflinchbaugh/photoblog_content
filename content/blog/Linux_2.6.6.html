@@ -1,0 +1,9 @@
+title=Linux 2.6.6
+date=2004-05-19 10:49:01.069
+type=post
+status=published
+tags=Java, Linux
+~~~~~~
+<p>Linux 2.6.6 was released recently, and there looked to be some interesting enhancements included.  The first thing that caught my eye was the option for a 4KiB stack instead of 8KiB.  This is designed specifically for machines running a large number of threads, which is common with java app servers.  I can't say I've noticed anything too different here, though.  Maybe my long-term swap usage will be lower with my JBoss server running.  It's still occupying the usual ~300MiB of virtual memory.</p>
+<p>The surprise feature is that laptop mode has been merged into the kernel.  I had looked at this patch previously, but my laptop didn't really give it a chance to spin down the drive.  It actually seems to work these days, and it can spend a considerable amount of time spun down.</p> 
+<p><strong>Update (19 May 2004):</strong> It seems that the native FIR IRDA driver (smcc_ircc) is magically now working and finding the right base I I/O addresses.  I'll have to see if it might communicate faster with my phone now.</p>

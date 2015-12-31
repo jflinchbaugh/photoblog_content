@@ -1,0 +1,10 @@
+title=Sendmail: Virtusertable and MX
+date=2004-11-10 10:44:27.178
+type=post
+status=published
+tags=Linux
+~~~~~~
+<p>I witnessed an interesting behavior today in sendmail.  I have an entire email domain mapped to a single user in <code>/etc/mail/virtusertable</code>: <code>@domain.com domainuser</code>.</p>
+<p>When the <code>MX</code> record pointing that domain to my host went away, leaving only a <code>CNAME</code> record aliasing domain.com to the name of my host, sendmail stopped recognizing the entry in <code>virtusertable</code> completely.  
+Sendmail was checking against my local user database directly, instead of <code>virtusertable</code>.
+Maybe an <code>A</code> record would have made sendmail recognize it, and it was just the <code>CNAME</code> breaking it.</p>

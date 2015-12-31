@@ -1,0 +1,9 @@
+title=Pulling Pictures From T616
+date=2005-01-19 10:56:50.111
+type=post
+status=published
+tags=Linux, Toys, Technology, Computers, T616
+~~~~~~
+<p>I've finally stumbled upon the right way to copy pictures off my T616.  I had been using the <code>obexserver</code> to accept photos I'd send from the phone.  This was terribly time-consuming and awfully manual.</p>
+<p>I can use <code>obexftp -b xx:xx:xx:xx:xx:xx -c Pictures -g 'Picture(1).jpg'</code> to <em>change</em> to the Pictures directory, then <em>get</em> the Picture(1).jpg file.  I think I was missing the <code>-c</code> option in my previous attempts.</p>
+<p>Multisync was also quite simple to setup to backup my contacts, calendar, and tasks.</p>

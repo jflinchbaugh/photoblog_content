@@ -1,0 +1,15 @@
+title=D-Link DIR-615 vs Asus EeePC 1000HE
+date=2009-08-06 15:12:40.062
+type=post
+status=published
+tags=Linux, Computers, Mobile, Home, Technology
+~~~~~~
+<p>Claire's excellent little EeePC 1000HE was not being so excellent in one area -- the wireless network.  Everything had gone so nicely with the installation and daily running the machine, but the network kept dropping out, and it always seemed to have a weak signal (~50%) in our favorite parts of the house.</p>
+<h1>The Problem</h1>
+<p>I didn't use the machine much, but it seemed to mostly behave for me -- I had trouble reproducing the problems, so I was continually moving the DIR-615 router around in the office trying to get it closer to where she wanted to use it.  It only needed to go through 4 or 5 surfaces (walls and floors).  The DIR-615 was performing fabulously for every other device in the house (ThinkPad, E71, MacBook Pro).</p>
+<p>I really started to suspect the netbook was maybe broken (but at this point, it's been months of it working on and off) when I installed the same model access point (D-Link DIR-615) at K-Prep, and Claire still dropped connection just trying to get packets across an open room!</p>
+<p>Google turned up some discussion of the wireless being weak, and people cracking these things open to install external antennae, but fortunately no talk of it being a Linux vs Windows driver issue.  I also stumbled upon talk of some radio bands no working so well.</p>
+<h1>The Resolution</h1>
+<p><em>Finally</em>, I started digging around more in the router configurations to try to work this out. I figured maybe I needed to eliminate the fringe technologies and settings (like those problematic radio bands, etc).  I didn't find those particular bands (5GHz?), but I <em>did</em> find the 802.11 B/G/N settings, and locked it down to the more tried and true B/G networks, eliminating the fringe N spec.</p>
+<p>I did this on both the home and work routers, all the normal devices kept working, and <strong>now</strong> even the EeePC is working reliably -- it almost never drops connection!</p>
+<p>I don't actually know how to get the Linux to tell me that much about its wireless network, so I don't know if it was ever really <em>using</em> the N network, or if the N network was just causing interference for its G connection. Interestingly, the connection power still sits around 50-70% in the popular spots in the house as it always has, but the connection is more robust at those levels than it had previously been.  Either way, Claire is once again happy with her little netbook, and I'm sort of wanting one again for myself.</p>

@@ -1,0 +1,11 @@
+title=PostgreSQL Tuning: BIGINT
+date=2004-07-06 13:04:26.615
+type=post
+status=published
+tags=Java, Blog Code
+~~~~~~
+<p>I luckily stumbled upon this  <a href = "http://fishbowl.pastiche.org/2004/06/17/i_love_postgres">blog about PostgreSQL indexing</a>.  I never really considered that it would be my database holding me back much, but it seems I should really analyze the queries my app server is creating.</p>
+<p>Basically, searching against <code>BIGINT</code> keys doesn't take advantage of the index, since it has to cast internally from <code>INT4</code> (integer) in the query to an <code>INT8</code> (bigint).  I'm using <code>java.lang.Long</code> in my Java code for my keys, so I wouldn't want to just drop back to <code>integer</code> in the database -- I could get away with it for now, but it's not very future-proof.</p>
+<p>In spite of <code>NUMERIC(18,0)</code> index scans being slower than <code>BIGINT</code> index scans, they'll beat out sequential scans of <code>BIGINT</code>, which is what my blog is doing now.  I'm testing it out in my development copy, but I'll probably have to test it in the production version of my blog to get a real feel for it.</p>
+<p>At this point, I must settle for <code>NUMERIC(18,0)</code> instead of casting my input parameters to bigint, since I know of no way to tune my queries created by JBoss' CMP implementation.</p>
+<p><strong>Update (6 July 2004):</strong> I haven't done any real benchmarks, but I really must wonder how to really test the plan for prepared statements in Postgres' JDBC driver.  Many of the links I had read referred to Postgres 7.3, but I'm running 7.4 these days.  Using Numeric also didn't feel much faster, so I'm trying Integer now, but I may revert back to Bigint down the road, since I really am using Long in my java code.</p>

@@ -1,0 +1,10 @@
+title=Cingular Settings Are Moving Targets
+date=2007-02-06 15:00:25.541
+type=post
+status=published
+tags=Mobile, SE S710a
+~~~~~~
+<p>A month or 2, <a href = "http://www.shoutstudios.com/~doug/blog/">Doug's</a> Cingular phone stopped getting proper DNS settings, so his Java applications which used hostnames to make HTTP connections just broke mysteriously.  We poked a hard-coded DNS server in there, and all was well again.</p>
+<p>Yesterday, I noted that my <a href = "http://www.groovr.com/user/jflinchbaugh/">Groovr</a> emails silently stopped getting delivered.  Further testing today showed that <em>no</em> outgoing email was working, so I went through the normal dance of digging up the configurations from the <a href = "http://www.cingular.com/support/content.do">Cingular Support</a> site.  I found it now recommends setting the outgoing server to <code>cwmx.com</code>, and not <code>cwmx.net</code>.  I experienced these same kinds of shifts with the SMS-to-email gateways a while ago.</p>
+<p>I'm glad that I've learned where to find these answers and don't need to call up tech support every few months when they change things on me.</p>
+<p><strong>Update (2007-02-06):</strong> <code>cwmx.com</code> has been broken all morning now.  The phone just said "Email failed." -- it doesn't really give much clue.  I just tested again, though, and the message finally went through.  I wish there was somewhere to track these known outages.  I really don't feel like contacting a help desk that probably has no idea either.</p>

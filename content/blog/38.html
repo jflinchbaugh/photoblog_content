@@ -1,0 +1,10 @@
+title=Patching SQuirreL-SQL
+date=2003-10-07 10:27:49.2
+type=post
+status=published
+tags=
+~~~~~~
+<p><a href = "http://squirrel-sql.sourceforge.net">SQuirreL-SQL</a> is a slick little general-purpose SQL monitor written in Java that'll connect to anything with a JDBC driver.  It's obviously, opensource, so I have the source and can make it do anything I want.  The only problem with this arrangement is when the build process is too cumbersome, requiring external tools, libraries, whatever.</p>
+<p>The release version of SQuirreL doesn't sort the db catalog list.  This makes it difficult to find your proper catalog in the dropdown when the list is long.  The code is so clean and well organized that I quickly found the implementation code for that dropdown and switched the <code>HashMap</code> that they were using to store the catalogs into a nice, automatically sorting <code>TreeSet</code>.  I changed all of 5 lines of code.</p>
+<p>Now, I needed to rebuild the project.   Within my limited attention span, this proved to be too cumbersome, so instead, I realized that I could just run <code>javac</code> myself and include the pre-compiled <code>fw.jar</code> in my classpath.  This allowed the compiler to rebuild my one tiny piece against the whole, without needing to build it all.</a>
+<p>I could have then ripped open the <code>fw.jar</code> and dropped in my replacement, but it's even easier to just let the classloader do it for me, so I add a new directory, <code>patch_classes</code>, to the classpath before the <code>fw.jar</code>, drop my new class in there, and the classloader loads mine, since it finds it first.  Now I have happy sorting catalog dropdowns with very little effort.  In addition to being quick, this approach keeps my changes separate from the distribution, so I can easily re-apply my patched class to a newer release in the case that they have not fixed this for me (they have already, though, in cvs, but again, the build process was not worth my time).</p>

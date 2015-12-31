@@ -1,0 +1,10 @@
+title=Difficulty with EclipseME 1.5.0 / WTK 2.2
+date=2006-03-22 17:08:59.433
+type=post
+status=published
+tags=Java, SE S710a
+~~~~~~
+<p>As I'm learning Java ME, I'm currently sticking with MIDP 1.0/CLDC 1.0 -- it's a bit for the challenge, and more for wider compatibility with older hardware.
+<a href = "http://eclipseme.org/blog/2006/03/18/version-150-released/">EclipseME 1.5.0</a> was recently released, and upon upgrading, I found that it did away with the old way of picking your profile and configuration, and now you pick it by device profile provided by your Wireless Toolkit.  I'm using Sun's WTK 2.2, so it provides 4 device profiles, but they're all MIDP 2.0/CLDC 1.1, so my code won't preverify, because it can't seem to figure out to switch back to the older spec.</p>
+<p>I ended up needing to manually create a new device profile to support the older specifications.  I duplicated the <em>DefaultColorPhone</em> and called it <em>DefaultColorPhone MIDP1.0/CLDC1.0</em>, and then found that I couldn't really edit all the propertios of the profile through the user interface, so I closed down Eclipse, and edited the <code>workspace/.metadata/.plugins/eclipseme.core/devices.xml</code> by hand.  I reverted the MIDP and CLDC versions, adjusted classpaths, and changed the launch command to hardcode <em>DefaultColorPhone</em> as the device, since my new name caused the emulator to not  start.  <span style = "text-decoration: line-through">Here's the <a href = "http://www.hjsoft.com/~glynis/devices.patch.txt">patch</a> representing the changes I made.</span></p>
+<p>Now I seem to be up and running.  I hope they can make this easier in the future versions of EclipseME.  There's also a distinct chance that someone on the mailing list can point me in the right direction, and I just did it the hard way.</p>

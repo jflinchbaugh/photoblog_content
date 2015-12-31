@@ -1,0 +1,12 @@
+title=Blog Speed: Implementing Some Old Standards
+date=2004-07-07 10:32:13.874
+type=post
+status=published
+tags=Blog Code, Java
+~~~~~~
+<p>I had overlooked a few standard optimizations which I should have included from the beginning:
+<ol>
+<li><strong>Cache Homes</strong> -- This included telling the xdoclet-generated utility classes to cache homes they lookup and to explicitly code my ejbCreate() to cache homes of my entities in the session facade.</li>
+<li><strong>Use DAO to bypass EJB finders when analyzing large lists</strong> -- Getting the latest comment.</li>
+</ol></p>
+<p>I have to say, it feels pretty fast again -- I'll have to go screwing it up again real soon.</p>

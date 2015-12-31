@@ -1,0 +1,18 @@
+title=Backup Space
+date=2004-01-31 02:04:25.437
+type=post
+status=published
+tags=Computers
+~~~~~~
+<p>I've been falling behind on my backup responsibilities, since my files worth backing up have outgrown the 6G drive I have in the backup server.  For the past week or 2 I've only been able to fit one week of nightly backups.  I used to do 3 weeks.</p>
+<p>I've extensively researched my options:</p>
+<ul>
+<li>Cheap IDE beast that isn't cheap enough. ("It's only IDE," said the SCSI snob.)</li>
+<li>Pile of monster 47G SCSI drives which cost more to ship than they're worth.</li>
+<li>Cannibalize the 15G drive from Claire's windows box.</li>
+</ul>
+<p>EBay came to the rescue, and I spent a modest bit of my Paypal fun-money on a few SCSI adaptors and a lot of <b>*10*</b> 18G Fujitsu SCSI drives.  Yeah!  It really is the most practical solution, since I can rack up as many as I need (maybe 2-3 initially) and keep the others on hand for quick replacement or expansion.  While not as fast as my primary drives in my server, I could use them in either my primary or my backup server as needed.  If I cared about absolute uptime I could get a RAID controller.  This could address my digital video storage problem as well.</p>
+<p>I bet Lynn would have loved to have these things just sitting around last week when he lost one in his array.</p>
+<p><b>Update:</b> I expect the 23-lb package on my door step this Friday. :)</p>
+<p><b>Update (31 January 2004):</b> I got the drives.  They were packaged beautifully and they shipped fast.  Getting them usable is taking a bit longer, though.  They came from a RAID array, so they're low-level formatted with 516-byte blocks, instead of 512.  Linux won't recognize the disks like that, so I had to grab a utility called <a href = "http://www.bit-net.com/~rmiller/scu.html">scu</a> and followed <a href = "http://doki-doki.net/~lamune/computers/blocksize/">this advice</a> to reset the hardware block size and perform a low-level format.  My SCSI BIOS will do the low-level, but I don't think it'll change the block size for me.  The format takes about 25 minutes.</p>
+<p>I did manage to get all the existing files on the gentoo box moved from the collection of SCSI drives to the one IDE drive.  Carlos helped me ensure grub would be bootable from the new drive.</p>

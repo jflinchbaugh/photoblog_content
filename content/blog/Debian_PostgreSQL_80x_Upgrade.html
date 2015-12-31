@@ -1,0 +1,9 @@
+title=Debian PostgreSQL 8.0.x Upgrade
+date=2005-06-13 11:55:28.025
+type=post
+status=published
+tags=Computers, Linux
+~~~~~~
+<p>Debian's released 3.1r0a, so it's time for chaos to ensue in the unstable branch.  All the maintainers can push their cutting edge stuff out that they've been holding.</p>
+<p>PostgreSQL 8.0.3 was among the long-awaited upgrades.  The maintainers set it all up so that Postgres 7.4.x and 8.0.x could coexist.  I could dump the 7.4 data, copy some configs to 8.0, then reload the data onto the 8.0 database.  That went smoothly enough that I could switch a server within 10 minutes.  I reconfigured 8.0 to use the old port 5432 (instead of 5433 as the coexisting config had), and all the client apps (some PHP, Perl, and my JBoss datasources) were ready to go again.</p>
+<p>After successfully switching over to the 8.0 version, I cleanly purged all the 7.4 Debian packages and retested to confirm that I had no stray dependencies on 7.4.  A couple days after the switch, I realized that I needed to update the paths to PostgreSQL scripts (particularly <code>pg_dumpall</code>) to get my nightly backups running again.</p>

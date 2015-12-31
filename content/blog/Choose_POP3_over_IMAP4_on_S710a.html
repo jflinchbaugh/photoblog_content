@@ -1,0 +1,10 @@
+title=Choose POP3 over IMAP4 on S710a
+date=2006-03-09 10:51:29.349
+type=post
+status=published
+tags=Java, Toys, Computers, Technology, SE S710a
+~~~~~~
+<p>I had configured my phone to check email every 30 minutes or so via IMAP4.  I didn't have anything time-sensitive going there, but sometimes it would get hung up and I wouldn't get mail for hours.  The phone's email client seemed to get blocked trying to connect to the server.  The little GPRS world icon would just be stuck enabled.</p>
+<p>It sort of felt like a memory-leak kind of error where I could hit the <em>Back</em> button to close the connection, but next time it would just get stuck again.  If I tried to <em>Send &amp; Receive</em> manually, it would get confused thinking it had a connection when it didn't and other odd behaviors.  At first, I had just resolved to cycle power, which sucked, obviously, but after a while, I found a few steps to get it sort of cleared up for a while: close connection, open browser or something else that could still use the connection properly, close that, check manually again, then it would work for a bit.  It would inevitably get blocked up again, though.  I ended up continually having to check it to ensure it was working.</p>
+<p>For kicks, I just switched it over to use POP3 instead, and it seems to be behaving much better now.  I bumped the interval to every 5 minutes, and I have yet to catch it stuck.  I guess it's just a simpler and more reliable part of the mail client.</p>
+<p>It <em>is</em> sort of strange to be stuck with a certain set of software like this.  On my computer, I'd just go try another piece of software, but this can't be upgraded or replaced.  I'd go try some Java mail clients, but the security model won't let me choose to allow a MIDlet to make socket connections.</p>

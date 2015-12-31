@@ -1,0 +1,10 @@
+title=Adjusting IRQs
+date=2005-04-18 09:39:01.16
+type=post
+status=published
+tags=ThinkPad R40, Linux, Technology, Computers
+~~~~~~
+<p>I've had issues with my ThinkPad occasionally freezing after a swsusp and resume, since I got the thing.</p>
+<p>It always struck me as odd that all my devices ran on the same IRQ 11, so almost a week ago, I found where this is done in the BIOS, and I changed them all from 11 to <em>Auto</em>.  Now most of them still get assigned to IRQ 11, but not all of them.</p>
+<p>More importantly, I've been running for over 6 days now, suspending and resuming with no freezes.  This is getting to be a long time, though it's previously behaved this long to just return to fits of freezing.  That was rare.  I'm also running Linux 2.6.12-rc2, but I had previously gotten that to freeze for me.  We'll see if this machine is fixed or just messing with me.</p>
+<p><b>Update (18 April 2005):</b> Bah.  It locked.  It took a long time to do it though.  I've found things that aggrevate the problem (like local APIC), and maybe I've found that diversifying IRQs helps alleviate it.</p>

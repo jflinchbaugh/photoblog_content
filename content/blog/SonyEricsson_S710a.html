@@ -1,0 +1,41 @@
+title=Sony Ericsson S710a
+date=2005-09-20 10:56:38.101
+type=post
+status=published
+tags=Technology, Java, Toys, ThinkPad R40, Linux, Entertainment, SE S710a, Computers, T616, Music
+~~~~~~
+<p>After almost no time spent obsessing over the <a href = "http://www.phonescoop.com/phones/phone.php?p=602">SonyEricsson S710a</a>, I've found occassion to buy the thing -- Claire broke her phone, so we had to head off to the local <a href = "http://www.cingular.com">Cingular</a> store for a couple new phones and contracts.</p>
+
+<p>I justified the paying the $200 (after rebate) by telling myself it's my only device -- I carry this in place of a camera, PDA, gameboy, media player, whatever.</p>
+<p>It's been pretty slick so far, and the feature lists available on all the other websites represent all the good things about the device.   Since there are so many positive things about the phone, I may just focus more on some of the negative surprises here.</p>
+<h1>Camera</h1>
+<p>The camera is pretty decent, and it has lots of configurations.  It sets EXIF data on the images, so I can more easily tell when I took the picture and it even the figures out the orientation (horizontal or vertical) of the photo, so it can be automatically rotated on the PC.</p>
+<p>When viewing photos, there's a <b>More</b>-&gt;<b>Use</b>-&gt;<b>Rotate</b> option which seems to only rotate the display of the image locally.  If you send this picture off, it'll still be in its original (sideways) orientation.  For images 320x240 or smaller, there's an <b>Edit</b> option which has its own <b>Rotate</b> tool to permanently rotate an image.  Larger images can not be rotated permanently on the phone.  That's sort of disappointing, since I'll need to always take upright pictures to send off to the <a href = "http://weblogs.hjsoft.com/blojsom/blog/john/">moblog</a>
+or take them smaller.  I had hoped to write a little plugin or something to get <a href = "http://blojsom.sf.net">Blojsom</a> to thumbnail and link the large images for me.  Maybe I'll need to figure out how to rotate the image as well according to the EXIF orientation data.</p>
+<p>From within the camera function, there is a <b>Send</b> button as soon as you snap a picture.  This option initially presented me with options to <b>Send via MMS</b> or <b>Send to Kodak Mobile</b> -- there's no <b>Send via Email</b>.  Playing with the <b>Message</b>-&gt;<b>Settings</b>-&gt;<b>Web Storage</b> options, I managed to add and select my own Web Storage with my moblog email address.  This made my custom option available in the camera's <b>Send</b> option.  Trying it, I found that the message got sent in such a way that Blojsom didn't quite handle it correctly (dropped the JPG extension and formed a broken link), and it came from <em>number</em>@mms.mycingular.com -- it went out as an MMS, not normal email.  I ended up having to just drop back and send it explicitly attached to an email from the built-in email client, not from the camera.</p>
+<h1>Messaging</h1>
+<p>This brings me to the messaging options.  AT&amp;T Wireless gave me a little mMode account with email which I conveniently dedicated to my phone.  Cingular doesn't do this, so I needed to create a mobile email address for myself -- I don't like having this thing hooked up to my primary email account all the time.  In all the default accounts, the Outgoing Mail server is set to <code>cwmx.net</code>, so I kept that for mine.  Since the email client insists on authenticating against an incoming server somewhere (even though it's unrelated to the outgoing server), I needed to set up my incoming account before I could email any pictures.</p>
+<p>I've found that I can send:</p>
+<ul>
+<li>SMS to other phones</li>
+<li>SMS to email addresses (as mobile.mycingular.com)</li>
+<li>MMS to other phones</li>
+<li>MMS to email (as <em>number</em>@mms.mycingular.com)</li>
+<li>Email through the normal email client from my mobile address. I configured the email client to poll my mobile email address every 5 minutes over the EDGE network connection, so that works as an almost live messaging option.</li>
+</ul>
+<p>That's a whole lot of messaging options.  Additionally, there are IM networks which I don't intend to actually use.  Maybe I'll load a Jabber Java midlet someday.</p>
+<h1>EDGE/WAP/HTTP</h1>
+<p>The default internet configuration for the phone's browser used HTTP through a proxy instead of WAP through a gateway.  It may have been the HTTP proxy or something, but the browser seemed very slow and unreliable.  I'd often get failures trying to load some MediaNet pages, and my bank's mobile access just rendered blankly.  Switching to the WAP settings (found in Cingular's knowledge-base) work much more reliably, and communicate properly with my bank.  Rendering seems to be the same for most my normal websites with either configuration.</p>
+<p>Once I got tethering setup (which took a bit more configuration than it did with AT&amp;T), I found I was getting the same old high ping-times (800ms), but my downloads could run at a blazing 26kBps (yeah, BYTES).  EDGE is kind of cool like that.</p>
+<h1>Java</h1>
+<p>I've managed to push my little toy MIDP 1.0 application to my phone and it runs nicely -- quicker than on the T616, which I'd expect.  The couple little 3D games they had loaded on the phone were very limited demos, so I just deleted them.  I'll probably code to the MIDP 1.0 spec for a while just to keep wider compatibility, but I look forward to exploring MIDP 2.0 once MIDP 1.0 gets too awkward.  I have a bunch of applications to test, like Jabber and SSH midlets.</p>
+<p>I did try a little motion detecting camera app.  I was amused to see the application successfully enable and access the camera.  I couldn't find an "Ask only once" option, though so the application stops and asks me permission every 1 second when it tries to snap a picture.  That obviously won't work.  The phone doesn't seem to want to allow me to change some of the application-specific Java permissions.  Hopefully, I'll stumble upon a solution to this one.</p>
+<h1>Bluetooth</h1>
+<p>I had to hack Bluemote 2.0 a bit to get it to even be able to connect to the phone.  It just seems to be a minor issue of the read buffers.  Once I figure it out cleanly, I'll submit a patch.</p>
+<p>The directory hierarchy on the card and camera memory is amazingly deep.  I pull my photos from camera memory using "Phone Memory/Pictures/camera_semc/100MSDCF" as the source path in <code>obexftp</code>.  Alternatively, the phone actually came with a little 3-in-1 USB card reader from Sony.  It works beautifully with Linux as standard USB storage.</p>
+<h1>Media</h1>
+<p>I'm looking forward to trying to use the MP3 player to carry a short podcast or 2 with me and play them in the car without having to boot up my notebook.  There doesn't seem to be a commercially available stereo adapter available, though.  There are supposedly schematics available to build one.  The normal old hands-free adapter for Sony Ericssons seems to only hook up the right side.  I'm sure I can figure out something.</p>
+<p>The camera also stores 3gp files, which I got mplayer to play with a bit of <a href = "http://tuxas.net/howto/howto-add-video-3gpp.html">convincing</a>, but sound doesn't seem to work.  I've seen some <a href = "http://www.home.no/ole.aamot/triangle.html">notes about patching mplayer</a> with the AMR sound format reference source, but haven't tried it yet.</p>
+<h1>Further Reading</h1>
+<p>For the next several weeks, I'm sure I'll be lurking on <a href = "http://www.howardforums.com/">HowardForums</a> and <a href = "http://www.phonescoop.com/forums/">PhoneScoop Forums</a>, and Cingular's Online Help digging for tips and tricks pertaining to this phone.</p>
+<p><b>Update (20 September 2005):</b> The little cover over the bottom port (for charging and hands-free) pops off often.  I never remember to close it after charging, so I knock it off putting it in the case.  I also rip the thing off when I open the phone with something plugged into it.  It's a poor design, and I'll eventually just lose the thing.</p>

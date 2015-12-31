@@ -1,0 +1,8 @@
+title=Debian's Apache 2.2.3
+date=2006-11-02 09:33:46.057
+type=post
+status=published
+tags=Java, Web Dev, Linux
+~~~~~~
+<p>With the old Apache 2.0.x, I'd sometimes see proxy errors if my JBoss server took too long to respond.  It was not reliably reproducible, but it looked a lot like <a href = "http://issues.apache.org/bugzilla/show_bug.cgi?id=37770">Apache Bug #37770</a> around keep-alive connections through the proxy.</p>
+<p>Apache 2.2.3 recently hit Debian, so when I got it installed, I was pleased to see that they seem to have included the patch for this fix, and I no longer see the proxy errors.  My previous approach to avoiding the issue is just excessively tuning JBoss, but that didn't even eliminate all the failures.</p>

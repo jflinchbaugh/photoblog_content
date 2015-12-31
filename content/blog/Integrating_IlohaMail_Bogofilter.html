@@ -1,0 +1,49 @@
+title=Integrating IlohaMail and  Bogofilter
+date=2004-05-04 09:11:26.862
+type=post
+status=published
+tags=Computers, Linux
+~~~~~~
+<p>Claire uses the IlohaMail webmail client on my server, and got lots of spam, like most people with an email address today.  I needed to provide an effective way to filter her email.</p>
+<p>I use the <a href = "http://bogofilter.sourceforge.net/">bogofilter</a> Bayesian filter with mutt, and it <a href = "http://www.hjsoft.com/blog/link/Basic_Bogofilter_Magic">works wonderfully for me</a>, so I needed to figure out how to get <a href = "http://ilohamail.org/">IlohaMail</a> to be able to use bogofilter.</p>
+<p>Bogofilter runs from procmail, so that was easy enough to setup in the <code>.procmailrc</code>:
+<pre>
+# filter mail through bogofilter, tagging it as spam and
+# updating the word lists
+:0fw
+| bogofilter -u -e -p -o 0.50
+
+# if bogofilter failed, return the mail to the queue, the MTA will
+# retry to deliver it later
+# 75 is the value for EX_TEMPFAIL in /usr/include/sysexits.h
+
+:0e
+{ EXITCODE=75 HOST }
+
+# file the mail to caught-spam if it's spam.
+:0
+* ^X-Bogosity: Yes, tests=bogofilter
+/home/claire/Mail/caught-spam
+</pre>
+This runs all incoming mail through bogofilter as it's delivered, tagging anything over the 0.50 threshold as spam (<code>-o 0.50</code>), and otherwise analyzing all incoming mail to update its statistics (<code>-u</code>) and better learn how to recognize spam.  The last rule just files all spam into its own mailbox to be checked and deleted by hand at a later time.</p>
+
+<p>Bogofilter must be trained as to what you consider spam and what is not.  I have macro keys in mutt that do this for me, but it's not that simple in a webmail client:
+<ol>
+<li>The client may not be running directly on the mail server, instead over IMAP.</li>
+<li>It's running as a web server user, not the mail user.</li>
+</ol>
+</p>
+<p>To allow the Claire with her web mail client to designate "spam" and "not spam", I first tried to have her forward spam messages to a special address which would trigger her procmail to call bogofilter to train itself.  The whole process of showing headers, forwarding, and typing in the spam address for each message was cumbersome, so I needed another way.</p>
+<p>IlohaMail and other webmail clients are adequate at tagging multiple messages and deleting or moving them to other mailboxes, so I created 2 new folders for her, one for spam and one not.  She moves spam from her Inbox to "spam-to-delete", and then she checks her "caught-spam" box for false positives and copies those messages to the "not-spam" mailbox.</p>
+<p>I then setup a cronjob to run a little script every 5 minutes to run bogofilter on these mailboxes, then clear them:
+<pre>
+#!/bin/sh
+
+bogofilter -Ns < /home/claire/Mail/spam-to-delete \
+        && :> /home/claire/Mail/spam-to-delete
+
+bogofilter -Sn < /home/claire/Mail/not-spam \
+        && :> /home/claire/Mail/not-spam
+</pre>
+</p>
+<p>Considering it a bit, such methods could be used to establish personalized server-side filtering for any IMAP mail client, like Outlook.  For slow client connections, it could save time and bandwidth, but still allow the user to control their filtering.</p>

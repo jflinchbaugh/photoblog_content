@@ -1,0 +1,10 @@
+title=New Hoops for JBoss 4.0.2
+date=2005-05-16 16:37:03.768
+type=post
+status=published
+tags=Java, Technology, Computers, Blog Code
+~~~~~~
+<p>With the release of JBoss AS 4.0.2, the embedded Tomcat has been <a href = "http://jira.jboss.com/jira/browse/JBAS-1691">switched to try to do classloading according to the servlet specification</a>.  I've always flipped these switches myself in previous versions to avoid hot deploy issues between Tomcat and JBoss.  Now that's the default config, but it's not quite the same now.</p>
+<p>I have my interfaces to my EJBs packaged into a client jar, and I load that client jar into my webapp.  To use these client interfaces Tomcat needs the classes from the standard jboss-client.jar.  Older versions of the app server seemed to manage to load this system jar with Tomcat's classloader, so those in turn could find the classes from my client jar in the appropriate classloader.  JBoss 4.0.2 started throwing ClassCastExceptions and invocation errors in different configurations, unless I re-enabled the UseJBossWebLoader, which is what I had been avoiding since the beginning.</p>
+<p>I finally figured out in the end, that I could use the default web classloader settings, ensure the call from Tomcat to my EJB facade was remote by explicitly mapping the ejb-ref to <em>jnp://localhost:1099/blog/BlogSession</em> instead of just <em>blog/BlogSession</em> (that was trying to optimize it into a call-by-reference).  Then I needed to add the jboss-client.jar to my war file, so it gets loaded by the webapp classloader, and not a higher one.  Now it works again.</p>
+<p>My old config must have still been tying itself into the UCL at some level, but not enough to cause reload problems.  This seems to be getting to be a noisy issue on the forums, and some upper-level JBoss people have expressed dissatisfaction with this particular config, so hopefully they tune it out, and maybe I'll not need the jboss-client.jar in my webapp war file in 4.0.3.  I'm curious if this would normally be necessary in other standard application servers.  I'm guessing not, but I can rationalize the requirement now.</p>

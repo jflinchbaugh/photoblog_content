@@ -1,0 +1,8 @@
+title=Corrupted Debian Firefox Install
+date=2004-03-22 13:20:06.102
+type=post
+status=published
+tags=
+~~~~~~
+<p>A long time back, I had issues with Mozilla's XUL files getting corrupted, then simple dialog boxes would no longer show.  Instead, I'd get XUL XML parsing errors.</p>
+<p>Firefox recently did it to me too.  Watching the Debian user mailing list, someone else noted this, and they concluded that /tmp had run out of space during install, and the install script silently failed to build the files correctly.  I cleaned up /tmp and tried again, and now it's fine.</p>

@@ -1,0 +1,13 @@
+title=End-User Linux Experiment
+date=2005-04-25 09:45:10.705
+type=post
+status=published
+tags=Technology, Linux, Family, Computers
+~~~~~~
+<p>My sister, Bryn, was having a hell of a time with her old Gateway PC running Windows 98.  The whole OS would just fall over if you looked it at sternly, and reinstalls only cleaned it up for a couple weeks.</p>
+<p>For the longest time, I had just regarded it as her doing stupid things (downloading untrusted code, etc), but then while talking to work friends, I learned that really, it's just common for an internet-connected computer to get all crudded up from nothing more than browsing with MSIE.</p>
+<p>Bryn dilligently tried to avoid IE, but some MS programs would just insist on popping it up to open a URL instead of her default Firefox browser.</p>
+<p>As she was already not getting anything done with the computer, I finally broke down and offered to put Debian Linux on her machine.  I figured that it couldn't hurt.  I let her sit at my Linux ThinkPad for an hour or 2 and try to get stuff done as she normally would (Thunderbird, Firefox, Gnucash, OpenOffice, some games, etc), and she still said, "Let's install it."  The only bad news would be that her scanner wasn't supported by any SANE driver.</p>
+<p>I took her computer for a week or so, installed Debian testing, returned it to her and configured the last little bits and got her up and running.  For the next couple days, I'd login, do updates, and install software I'd missed.  I also had to make some adjustments to her desktop, etc.  I found x11vnc to be a great little tool for remotely controlling her desktop, though most everything I needed to do could be done over a normal secure shell connection.</p>
+<p>A month later or so, I needed to get rid of the Xprint server on the box, since it was managing to produce postscript output which would just hang CUPS and the hpijs print driver whenever she tried to print from Firefox.  In that time, I also managed to build a shiny new 2.6.11.7 kernel for her, install it, and get her to reboot a couple times as I worked it out successfully.</p>
+<p>At this point, the machine's been running well, and easily obtains uptimes unseen while running Windows.  She just uses the computer now, and I login every couple days to update it.  I actually had to ask her the other day if there was anything more she needed from the computer, since she has stopped calling me to fix the machine.  The experiment has yielded a useful machine and a happy normal end-user, instead of the tech-support hell to which I could have been sentencing myself.</p>

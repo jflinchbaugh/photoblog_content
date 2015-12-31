@@ -1,0 +1,14 @@
+title=ThinkPad R40 Frustration
+date=2007-01-04 08:38:19.432
+type=post
+status=published
+tags=Linux, ThinkPad R40, Computers
+~~~~~~
+<p>My R40 has had a problem with occasional freezes after resume from any sleep or swsusp for the entire time I've had it.  The worst part is that it'll go days without any trouble, then start doing it again with no discernible reason, except that it had been suspended 2-10 minutes previously.  It, of course, provides no stack traces or SysRq responses.  It does seem that the more inconvenient a freeze would be, the more likely it'll happen. (Murphy's Law?)</p>
+<p>Someone once suggested that it may be ACPI related, so I've eagerly watched for news in this area with every kernel patch that is released.  I've also tried flipping all the little switches around ACPI.</p>
+<p>Today, the frustration grew enough for me to switch from ACPI to APM to see how it fares.   So far, it suspends fine, but every couple resumes, it likes to corrupt the screen.  Another suspend/resume cycle fixes it.  I've not played with swsusp yet in this new configuration.</p>
+<p>I've always felt that I'd be missing something without ACPI: handy events, configuration, scripting, etc, but now I intend to really test that assumption.  The suspend button works, and the battery monitor displays, so I'll see what else I need.</p>
+<p><strong>Update (10:00am):</strong> The screen corruption thing sucks.  It can be pretty persistent, requiring several suspend cycles to get it to fix itself, but it at least continued to respond.  I get the feeling the corruption could have been caused by the quick cycling itself.</p>
+<p><strong>Update (4 January 2006):</strong> Along with screen corruption, I managed to lock the computer completely when it tried to restore the X screen.</p>
+<p>To avoid all this trouble with the APM suspend, I tried the stock software suspend from the kernel.  This worked for a couple days, but then last night, it froze again, shortly after the resume, and it left a tiny bit of the screen corrupted -- just like it does when running ACPI.  ACPI's event model is much nicer, so I've reverted back to using ACPI, since it's just going to do the same thing.</p>
+<p>I really wish I could figure out what causes the machine to freeze.  Since it happens only after a suspend or software suspend, and a software suspend effectively a cold reboot, I can't see that it's a hardware problem.  It must be an inconsistency in the restoration of the kernel.  I'm hopeful that all the lock debugging work will unearth the issue, but ultimately, I have no idea how to begin to fix it.  On th other hand, I have trouble finding much evidence of other people seeing this problem.</p>

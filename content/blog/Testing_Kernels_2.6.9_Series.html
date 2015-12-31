@@ -1,0 +1,9 @@
+title=Testing Kernels: 2.6.9 Series
+date=2004-10-15 13:31:55.01
+type=post
+status=published
+tags=Linux, ThinkPad R40
+~~~~~~
+<p>I must have gotten bored or something with the recent slow Linux kernel development.  I patched kernel source up to 2.6.9-rc4-mm1 and gave it a shot.  I wanted the ACPI and USB suspend of rc4 and the ibm-acpi of mm1.  Well, mm1 broke Java (but I got a patch for that) and it broke swsusp, so it just wouldn't work out.  rc4 seems to have everything working so far.  I still need to try to load the ipw2100 drivers into this kernel yet.</p>
+
+<p>The cleaned up and working ACPI S3 suspend will be nice to have.  I'll have to figure out when I'll use that instead of swsusp.  S3 is very fast, but if I let it sit for too long asleep, it could still drain its battery.  Maybe I'll be able to setup an ACPI wakeup timer to have it awake and then swsusp itself after a long period of S3.</p>

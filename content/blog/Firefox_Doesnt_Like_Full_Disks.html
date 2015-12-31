@@ -1,0 +1,7 @@
+title=Firefox Doesn't Like Full Disks
+date=2007-01-05 03:52:02.625
+type=post
+status=published
+tags=Computers, Linux
+~~~~~~
+<p>Firefox (Debian Iceweasel) has been getting very angry with me recently on my amd64 box.  Occassionally a restart of the browser would clear it, but when it didn't, I fired up <code>strace</code>, and finally saw the reason -- strace showed the errors that Firefox was experiencing while trying to write the cookies database to disk.  Once I cleared some disk, it's working great.  It's too bad it couldn't have shown me that error itself.</p>

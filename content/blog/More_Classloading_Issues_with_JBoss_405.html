@@ -1,0 +1,9 @@
+title=More Classloading Issues with JBoss 4.0.5
+date=2006-11-02 10:34:41.088
+type=post
+status=published
+tags=Java
+~~~~~~
+<p>I've been <a href = "http://www.jboss.org/index.html?module=bb&amp;op=viewtopic&amp;t=93514">fighting</a> for a couple days with JBoss 4.0.5.  4.0.4 has been working fine for me, but now they've changed around the classloading yet again.  3.2.x used to be difficult to get configured to be J2EE compliant (but I could do it), and they had cleaned it up in the 4.0.x series.  Now it seems they've gone back to the flattened unified classloader (UCL), and I can't get it configured to work at all.</p>
+<p>I'm seeing the familiar ClassCastExceptions due to packaging my EJB interfaces inside the war that uses them.  I could abandon doing this and just succumb to the UCL kool-aid, but I'm afraid that'll rot my brain for the times when I need to isolate different version of the same classes within the same server, or when I need to work with another application server.</p>
+<p>Since I flipped all the advertised switches, and it still didn't work, I'm expecting it'll end up being a bug and there will be a JBoss 4.0.6 (or 4.0.5SP1) which fixes it.  Unfortunately, it'll be delayed by the JBoss people's blind defensiveness over their odd classloader scheme -- You mention a classloader issue, and you just get people jamming wiki URLs down your throat when in reality, this configuration has been a moving target from the beginning.</p>

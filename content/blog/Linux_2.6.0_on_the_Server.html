@@ -1,0 +1,23 @@
+title=Linux 2.6.0 on the Server
+date=2004-01-06 16:47:33.396
+type=post
+status=published
+tags=Linux
+~~~~~~
+<p>Yesterday I started moving my server to Linux 2.6.0.  Within about 30 minutes, I had it booted and my network services (sendmail, apache, jboss, etc) were all running, and I was actually able to leave the box running for hours untouched.  After a bit of tuning and work, I found a known bug in the usb hid drivers and apcupsd, so I ended up upgrading to 2.6.1-rc1.</p>
+
+<p>I had to tune a few things:
+<ul>
+<li>The usb scanner module won't unload, so I've bypassed it for now and let sane use libusb.  I've sent the OOPS off to the kernel mailing list.  Having the frame pointers compiled into the kernel is great, since it means no more decoding with ksymoops -- All the symbol names are right there in the initial error messages.</li>
+<li>My alsa package had configured a bunch of modules options which were inappropriate and caused the alsa driver to not load, so I commented those out.</li>
+<li>The ide/usb-storage dependancy which we saw back in the 2.4.x kernels seems to still exist in the 2.6 kernels, so I needed to compile ide into the kernel instead of modularly.</li>
+<li>Bind 9 and proftpd pitched fits about not being able to set capabilities, so I loaded up the <code>capability</code> module.</li>
+<li><code>psmouse</code> module is needed for the mouse to work.</li>
+<li>My hotpluggable USB devices are shuffling around, so the smartmedia reader is difficult to reliably find at the same place.  I need to figure out where it will reliably show up no matter how it was plugged in.  The scanner's USB bus and device number change similarly.</li>
+<li>The cold plug of all the USB devices is a bit slow, so the hiddev was not initialized when apcupsd tried to start.  This caused apcupsd to fail until I pushed it way back to be one of the last things to start.  apcupsd also likes to complain when I'm swapping around other USB devices (lost communication).</li>
+</ul>
+</p>
+<p>I supposedly have ACPI, so the kernel can power-down the box and control other little things.  I have not played with that yet, since it's not all that important.  Maybe the temperature sensors will report through ACPI.</p>
+<p>The new threading structure is slick too, since now my process lists aren't overrun by a million java processes, etc.  JBoss now shows only one java process, so I can see other processes in <code>top</code>.</p>
+<p>I think at this point, I have most everything working.  I'm finally doing my part to help debug these kernels, so I anxiously await the next couple kernel releases as the rest of the world starts using them.</p>
+<p><b>Update:</b> I have 2.6.1-rc2 on both my laptop and server now.  Nothing is all that interesting, though, which is good I suppose.</p>

@@ -1,0 +1,15 @@
+title=AGP Broke My Software Suspend
+date=2004-03-18 16:14:58.089
+type=post
+status=published
+tags=Linux
+~~~~~~
+<p>Debian recently put a slicker version of hotplug in place that actually probes the PCI bus and loads all the appropriate drivers for what it finds.  It automatically loaded <code>intel-agp.ko</code>, which I never before loaded.  This module caused a mysterious failure of swsusp.  I'd end up in a resume-reboot loop.  Once I added the module to the <code>/etc/hotplug/blacklist</code>, suspend continued functioning.</p>
+<p>I had explored all sorts of possibilities trying to fix this thing:
+<ul>
+<li>I had added a second swap partition (reclaiming my old S4bios partition).</li>
+<li>I downgraded my kernel to revert the latest ACPI BK patches which fixed my battery monitor.</li>
+<li>I even tried to figure out the alternative pmdisk support, which did absolutely nothing.</li>
+</ul>
+</p>
+<p>In the end, it was <a href = "http://marc.theaimsgroup.com/?l=swsusp-devel&m=107962155803929&w=2">this swsusp-devel message</a> which clued me into the fix.</p>

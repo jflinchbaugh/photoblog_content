@@ -1,0 +1,12 @@
+title=RimuHosting's New VPS Plans
+date=2006-11-28 15:21:16.481
+type=post
+status=published
+tags=Web Dev, Java, Computers, Blog Code, Linux
+~~~~~~
+<p><a href = "http://www.rimuhosting.com/">RimuHosting</a> recently realigned their middle to high-end <a href = "http://rimuhosting.com/order/startorder1.jsp?type=18">VPS plans</a> in their Dallas data center to give more memory for a cheaper price, so I submitted a ticket to switch to a MiroVPS 3 with 224M of RAM and doubled the disk.  I'm even saving $6 in the end.</p>
+<p>The extra RAM is great for JBoss.</p>
+<p>To alleviate an <em>OutOfMemoryError: heap space</em> error I had occasionally seen, my current JBoss settings are:</p>
+<blockquote>
+<p><code>-server -Xms50m -Xmx50m -XX:ThreadStackSize=96 -Xss96k -XX:+UseParallelGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -verbose:gc -XX:-TraceClassUnloading</code></p>
+</blockquote>

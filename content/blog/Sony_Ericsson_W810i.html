@@ -1,0 +1,44 @@
+title=Sony Ericsson W810i
+date=2007-06-08 10:33:42.744
+type=post
+status=published
+tags=Entertainment, Music, Technology, Mobile, Photography, Toys, Java, Linux, Computers
+~~~~~~
+<p>As most people with face-to-face contact with me know, I've recently picked up a new <a href = "http://www.phonescoop.com/phones/phone.php?p=893">Sony Ericsson W810i</a> from <a href = "http://www.cingular.com/">Cingular</a>.</p>
+<p>I was very happy with the phone from the start, then about 4 hours later I discovered how brain-dead crippled the phone was by Cingular.  With all hopes dashed, I resolved to unbrand the phone or return it.</p>
+<h2>Unbranding</h2>
+<p>I had come to expect the "security" limitations imposed on the Java implementation, but finding the stock Sony Ericsson email client disabled was completely unacceptable.</p>
+<p>I found some scant mentions of free tools to manipulate Sony Ericsson phones, but alas, they all seemed too scary for me -- I just didn't have the stomach for <em>bricking</em> my phone.  In the end I chose to pay about $10 and use <a href = "http://www.wotanserver.com/">Wotan Server</a> -- they're documentation seemed the most complete.</p>
+<p>I actually ended up running the Wotan software on my work computer, since I didn't have a readily available Windows machine otherwise.  After the longest 5 minutes or so of my life, the unbranding process completed, and I rebooted to have a completely functional and kick-ass phone!  Not only did the nice email client return, but I found that the Java implementation was functional beyond my wildest dreams -- I had open access to Bluetooth, PIM, camera, and even network sockets!  <a href = "http://www.xk72.com/midpssh/">MidpSSH</a> now runs!  I've wanted MidpSSH on my phones for years.</p>
+<p>Cingular seems to have even disabled the Flash Lite menu system for some reason, so I have that back as well.</p>
+<p>I'm currently running the R4EA031 firmware.  I'm pretty sure I can't use Sony Ericsson's Update Service with this firmware, though.  It seems to figure out it should be a Cingular phone, and pushes that crippled firmware back onto it, but left the upgraded filesystem.  (See <strong>I Broke It</strong> below to see why I had opportunity to flash phones a couple times.)</p>
+<h2>Back to the Beginning, Unpacking the Device and Accessories</h2>
+<p>The phone is the tiny candy bar style -- very similar to my old T616.  I love this form factor, though I miss the larger 320x240 pixel screen of my old S710a for a few uses.</p>
+<p>Claire hated the tiny buttons when I tried to get her to pick this phone, but I don't mind it in the least.  It's great to have so many functions so quickly accessible.</p>
+<p>The phone comes with a USB cable and a 256M MemoryStick Duo Pro card.  This is a pretty good start.  The USB is indispensable if you're going to be loading music onto the phone, which you should, since it comes with very nice ear buds.</p>
+<p>The ear buds are nice little Sony deep-ear, isolating things.  They sound very good.  As I unfortunately found out, to buy comparable replacement Sony ear buds can be quite expensive (~ $40).</p>
+<p>They also finally provided a normal 1/8-inch stereo jack, so you can use your own head phones or plug the phone into any other audio system (like your car).  The jack is still in a proprietary cable, but it's better than nothing.  The ear buds (or anything else) plug into the main cable, and the microphone's there, so you can use any headphones for phone calls.  I had hacked up my old hands-free kit on my S710a to add a jack.</p>
+<h2>Connecting to the Linux Notebook</h2>
+<p>The Bluetooth works great for serial tethering, OBEX (pushing applications and media, pulling media) just like I came to expect back with my <a href = "http://www.hjsoft.com/blog/link/SonyEricsson_S710a">S710a</a>,
+and <a href = "http://www.hjsoft.com/blog/link/Fun_Bluetooth_Linux">T616</a>.</p>
+<p>The phone also came with a USB cable. The phone has 2 modes: <strong>Phone Mode</strong> or <strong>File Transfer</strong>.</p>
+<p>Phone Mode makes it do OBEX/serial just like it does over Bluetooth.  I just use <code>obexftp -u 0</code> or talk to <code>/dev/ttyACM0</code> in place of <code>/dev/rfcomm0</code>.</p>
+<p>File Transfer mode reboots the phone and makes it act as a little USB mass storage device, which Linux can still see.  I'd get some errors on the Linux box about overrunning the end of the device (especially with Nautilus), but it worked for the most part.  I still choose to use Phone Mode primarily though, since it keeps all the normal phone functionality enabled.</p>
+<p>It took me a long time to get around to it, but I finally poked around and found a link with hints at having <a href = "http://news.softpedia.com/news/Access-Your-Mobile-Phone-Through-USB-Cable-46486.shtml">udev assign more open permissions to my phone when it's plugged into USB</a>.  Ultimately, I ended up creating an <code>/etc/udev/rules.d/phone.rules</code> file containing only this line:</p>
+<blockquote><p><code>BUS=="usb", SYSFS{idVendor}=="0fce", SYSFS{idProduct}=="d042", GROUP="plugdev"</code></p></blockquote>
+<p>Since I'm in the <code>plugdev</code> group on my notebook, this provided sufficient access.  With this access, I use the USB primarily to push music and podcasts to the phone.</p>
+<h2>Messaging</h2>
+<p>The email client has gotten slicker since previous phones.  It now has the option to stay connected all the time and watch for email.  Email gets delivered from my IMAP account within seconds  of arrival on the server.  It's like push email, and much faster than the 5-minute polling I used to do.  I've abandoned using SMS for quick email notifications, and now I just use my IMAP account, since it's so fast.</p>
+<p>With Bluetooth enabled and this push email option holding the data network up all the time, my battery lasts about 2 days.</p>
+<h2>Camera</h2>
+<p>The 2 megapixel camera is awesome! You can see examples shots mixed into my <a href = "http://flickr.com/photos/jflinchbaugh/">Flickr account</a>.  Macro mode is a welcome addition to the feature set, but spot metering is gone.  Camera silent mode succeeds in muting the obnoxious shutter sound.  I'll continue to use this camera extensively.</p>
+<p>The W810i has a few more image editing options, but rotation and scaling still seems a bit awkward.  It's nice to be able to use the zoom functionality while viewing a saved photo to have more flexible cropping, but it seems to save at odd resolutions (no 320x160 or 640x480).  Since I'm emailing photos to Flickr these days, I don't care so much about the scaling, since that happens on the server-side now.</p>
+<h2>Yes, I Even Use It for Voice, Occasionally</h2>
+<p>The voice quality is amazingly good.  The S710a was a bit disappointing in the end, but this phone performs very well, even with low signal.  During the unbranding process, I did enable the AMR codec which allows lower sampling rates with low signal.  I must wonder if AT&amp;T/Cingular support this codec at all, because this may be the key to voice quality still being useful even with low signal.  I didn't test the phone too much before modifying it.</p>
+<p>The ear piece volume is a bit low for use in noisy environments (the car), but a nice set of earplug-style ear buds makes it much easier to hear.</p>
+<h2>I Broke It</h2>
+<p>About a month into using the phone, the shutter button started flaking out.  It has the 2-click functionality common on most cameras where the half press focuses and the full press takes the picture.  Well, the full-click stopped registering.  It felt like an obvious hardware defect, but cleaning didn't help it.  After about a week of struggling with it, I ended up sending it back to Cingular  for a replacement.  I unfortunately had to go through the whole unbranding process again with the new phone. (I never did hear any noise from Cingular about the broken phone being unbranded.  That's good of them.)</p>
+<p>The only problem with the new phone is that I put a few scratches in the screen pretty early.  I've always hated those hazy little screen protector sheets, and I never had a need for them previously.  Maybe I'll change my tune now, though I've still not installed one.  (It'll just make it worse.)</p>
+<h2>Conclusion</h2>
+<p>I'm extremely happy with this phone.  It's the best I've had.  I think I've also learned my lesson about locked phones.  I'll pay the extra $100 next time and buy the retail, unlocked phone to avoid the hassles.  Clean phones resell better, and I'll not have to necessarily limit my upgrades to 2-year periods.</p>
+<p>A friend is trying to convince me to step up to more advanced S60 phones from Nokia, and I may bite (since I'll not wait for subsidized phones anymore), but I more likely will remain a Sony Ericsson super-fan.  As a developer, I like to target the more widely available Java phones over smart phones.</p>

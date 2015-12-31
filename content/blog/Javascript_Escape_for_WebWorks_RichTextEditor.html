@@ -1,0 +1,11 @@
+title=Javascript Escape for WebWork's RichTextEditor
+date=2006-11-14 11:58:40.89
+type=post
+status=published
+tags=Computers, Web Dev, Java
+~~~~~~
+<p>I rolled out the news admin interface to the <a href = "http://www.k-prep.com/">K-Prep</a> site a few weeks ago, and immediately, Claire found a way to break it -- including a single quote (apostrophe) in a news item broke the rendering of the rich text editor control.  It turns out that the <code>&lt;ww:richtexteditor/&gt;</code> taglib component doesn't automatically escape the contents of the field, so I had to do it manually.</p>
+<p>I fixed it by escaping it in my WebWork action before handing the value off to the JSP:
+<code>newText.replaceAll("'", "\\\\'"); // yes, it takes that many escapes</code>.</p>
+<p>I recently saw a recommendation to use <code>freemarker.template.utility.StringUtil.javaScriptStringEnc(String)</code> to accomplish the same thing (with even more complete transformations).  In initial testing, this seems to work just fine, so I'll switch to this utility, since larger minds than mine have already mulled over its implementation.</p>
+<p>I still don't comprehend why I should need to do this myself though.  The tag knows the exact value of the text, it knows it's going to render it in Javascript snippet, so why do <em>I</em> need to know that.  It's a terrible break in the encapsulation.  I'm working at too high of a level to have to worry about Javascript injection.  I wonder if the FreeMarker tag for the rich text editor does this correctly.</p>

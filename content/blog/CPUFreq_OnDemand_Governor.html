@@ -1,0 +1,8 @@
+title=CPUFreq OnDemand Governor
+date=2005-04-28 09:54:49.87
+type=post
+status=published
+tags=Linux, ThinkPad R40, Computers
+~~~~~~
+<p>I've been using cpudynd on my ThinkPad to switch the CPU speed from low to high as system load requires.  It promises to save battery, since the CPU can run at lower power when idle.</p>
+<p>A couple kernel versions back, I saw an <code>ondemand</code> governor was added right into the kernel, so I'm giving that a try now.  I shutdown cpudynd, and just have a simple little init script set the governor to "ondemand" on boot.  This governor can cycle through all 5 speed states (1400, 1200, 1000, 800, 600MHz) very quickly as needed and does it in kernel-space, instead of user-space.  It may not be as tunable as cpudynd, but that doesn't really matter, since the machine experiences no side effects of switching speeds (unlike the old Inspiron, which would stop processing on every switch).</p>

@@ -1,0 +1,16 @@
+title=Using the D-Link DIR-615 Wireless Router as Access Point
+date=2008-10-29 22:21:39.278
+type=post
+status=published
+tags=Linux, Computers, Home
+~~~~~~
+<p>My very old Hawking Tech wireless access point started to flake out, so I had to go out and get a new one. I was preparing for the worst -- I was going to end up with a router, and I couldn't disable the router functionality. Access points are hard to come by these days, and the only one I could find cost twice as much as a more feature-rich router (in case I wanted to use any of those features one day).</p>
+<p>My Debian Linux machine already serves as my customized NAT router, so I didn't want another layer of routing introduced.  Having the wireless hosts hidden behind another NAT would also keep me from being able to access the wireless hosts from the wired network.</p>
+<p>I read lots of horror stories of people using Linksys and not being able to disable the NAT and use it as a plain access point, so I was stearing clear.  That left the D-Link, Netgear, Belkin, etc. While walking between OfficeMax and Circuity City, I quickly Googled D-Link and stumbled upon a recommendation of turning off the DHCP server, assigning a static IP, and then being able to use an existing router.  I found a good price on the D-Link DIR-615 Wireless N router, so I picked it up at Circuit City.</p>
+<p>I got it home, plugged it in conventionally into the existing network, and hit the configuration IP from the wireless network (http://192.168.0.1/).  I poked around the configuration, Googled around a little more, and found the keys to making it all work:</p>
+<ul>
+<li>Set a new static IP so the router falls within your existing network.  This allows you to find it again for configuration when we're done.</li>
+<li>Disable the DHCP server, so that the existing DHCP server for the network can continue to hand out configurations.</li>
+<li>Disconnect the incoming wired connection from the "Internet" port of the D-Link, and plug it into one of the host ports on the D-Link.</li>
+</ul>
+<p>Where you still can't flip a configuration to disable the NAT on this router, if you neglect to use the "Internet" side, and keep everything on the same side of the router (the wireless and 4 host ports), the NAT can't affect your packets, and it just works as a simple switch between wired and wireless networks!  This probably would have worked for any router I could have bought.</p>

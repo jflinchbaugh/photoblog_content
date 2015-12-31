@@ -1,0 +1,35 @@
+title=Fun with Bluetooth and Linux
+date=2004-09-21 17:05:37.738
+type=post
+status=published
+tags=Toys, Computers, T616, Technology, Entertainment, Linux
+~~~~~~
+<p>I've been playing a bit to get my T616 to do slick bluetooth tricks with my notebook.  Besides the normal GPRS/Bluetooth dialup, I can use the phone to remote control the computer and as a proximity sensor.</p>
+<p>My first trick was the proximity sensor -- the computer knew when I walked away and when I returned, so it could activate and deactivate the screensaver accordingly. Here's my little toy script to do that:</p>
+<pre>#!/bin/sh
+
+STATE=x
+
+while true; do
+    if hcitool scan | grep "xx:xx:xx:xx:xx:xx" &amp;&gt; /dev/null; then
+        if [ "$STATE" != "present" ]; then
+            STATE=present
+            echo $STATE
+            xscreensaver-command -deactivate
+        fi
+    else
+        if [ "$STATE" != "absent" ]; then
+            STATE=absent
+            echo $STATE
+            xscreensaver-command -activate
+        fi
+    fi
+
+    sleep 20
+done</pre>
+<p>I grep the output of hcitool's scan for my BD and have it act on state changes, present or absent.</p>
+<p>I finally figured out that I can push files to the phone with <a href = "http://triq.net/obexftp">obexftp</a>:</p>
+<pre>obexftp -b xx:xx:xx:xx:xx:xx -p picture.jpg</pre>
+<p><code>obexftp -l</code> can be convinced to list the folders on the phone, but the <code>-g</code> get option just won't work.  Luckily, I can start up the <code>obexserver</code> to accept file transfers initiated by the phone (see its man page for the additional <code>sbptool</code> command which is required).  That's enough to allow me to transfer files without necessarily emailing them to myself.  It was disappointing to see that I could not transfer the Java games off the phone.  I'd like to archive the games off the phone and make room for other data.</p>
+<p>The final trick is the bluetooth remote control.  I had looked at a couple tools, but <a href = "http://www.geocities.com/saravkrish/progs/bluemote/index.html">bluemote</a> is the most featureful.  It uses <code>AT</code> commands to push menus and a user interface to the phone screen.  The part that took me the longest to figure out is where these menus actually show up!  It creates itself as an accessory under <strong>Connect->Accessories</strong> on the phone.  Once you find it there, it'll run whatever actions you've configured (like <code>rhythmbox --next</code>), control the PCM volume or even control the mouse pointer.  It's quite impressive.</p>
+<p>Next I need to figure out how to implement a moblog for my phone pictures.  I don't expect that to take long.</p>

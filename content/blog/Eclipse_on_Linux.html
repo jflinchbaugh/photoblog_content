@@ -1,0 +1,11 @@
+title=Eclipse on Linux
+date=2005-02-22 12:12:30.289
+type=post
+status=published
+tags=Java, Linux, Blog Code
+~~~~~~
+<p>I've been fighting on and off with <a href = "http://www.eclipse.org/">Eclipse 3.0.1</a>, <a href = "http://ant.apache.org/">Ant</a>, <a href = "http://subversion.tigris.org/">Subversion</a>, and <a href = "http://xdoclet.sf.net/">XDoclet</a> on my Linux notebook for a couple days now, and I think I've gotten it working reasonably now.</p>
+<p>The <a href = "http://subclipse.tigris.org/">Subclipse</a> plugin works reasonably, though I was a bit slow figuring out that I need to import a project from the Subversion Explorer view.  I thought it may be simpler to keep my SVN authentications straight if Subclipse used the command-line SVN command instead of JavaSVN, but I see little errors reported there, in particularly when committing.  It still works, so I've not bothered switching it back.</p>
+<p>I had to add a sourcepath to the project to find the code that XDoclet generated for me.  The Add dialog that pops up is a bit finicky, and came up blank often.  I'd have to try it 4 or 5 times successively to get it to actually populate with a project tree.  Additionally, in some attempts to setup the project, I'd get errors where Eclipse couldn't resolve references in <em>source</em> to code in <em>gen-src</em>.  Jumping to the code declaration (F3) found the code just fine.  Recreating the project (yet again) did eventually fix it, so all the references were resolved when viewing the code in the editor.</p>
+<p>In a smaller toy project (2 files), I played with using 2 sourcepaths, and I found that adding the gen-src path back after the resolutions were broken caused them to stay broken until a rebuild of the project <em>using the Java Builder</em> in that instance.  I think maybe my custom Ant Builder wasn't able to trigger the resolutions in the IDE like the Java Builder did.</p>
+<p>It was a huge mess, and I almost abandoned it several times, but I really want to apply some of its refactorings to move some of my code around my project.  Having the IDE fix up all the references just sounded too useful to abandon.  Eclipse has been working out pretty nicely for a large project at work, so I thought it was time to try to apply it to my own unique little (but complex) personal environment.</p>

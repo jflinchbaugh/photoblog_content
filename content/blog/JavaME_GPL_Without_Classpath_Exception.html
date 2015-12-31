@@ -1,0 +1,11 @@
+title=JavaME GPL Without Classpath Exception
+date=2006-11-16 14:34:55.038
+type=post
+status=published
+tags=Linux, Java, Mobile, Computers, Technology
+~~~~~~
+<p>Everyone seems concerned about licensing of their JavaME applications, but this quick little article about <a href = "http://www.javalobby.org/java/forums/t84460.html">JavaME and the GPL</a> should allay everyone's fears.</p>
+<p>Basically, when we develop midlets, we're just writing code which runs on top of the JavaME platform code.  We'll never need to distribute the JavaME code with our applications, since that's always provided by phone vendors and emulators.  This is exactly the same situation with any application (open or closed) running on top of the Linux kernel which is GPL as well.</p>
+<p>Only those who derive works from Sun's platform code (say an emulator or a phone implementation) are obligated to distribute that implementation under the GPL.  See the difference?</p>
+<p>It <em>is</em> likely that someone will want to distribute a desktop or JavaEE application with the all the JVM and server API code, though, so the Classpath exception was specified in those licenses to explicitly allow such distribution without forcing a GPL license on the whole project.</p>
+<p>In the end, it makes no sense for Sun to cripple the flourishing commercial JavaME application market.</p>

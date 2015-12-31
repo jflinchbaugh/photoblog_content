@@ -1,0 +1,8 @@
+title=Java Generics
+date=2004-07-04 13:13:11.097
+type=post
+status=published
+tags=Java
+~~~~~~
+<p>I had expressed in an <a href = "http://www.hjsoft.com/blog/link/Java_2_SDK_1.5_Language_Changes">old article</a> that I didn't see the point of generics.  Having started reading Design Patterns, I do actually see the point now.</p>
+<p>I had originally thought I could just programatically enforce the types of objects I insert into my collections, but it's not primarily  about enforcing what's in the collection. It's more about being able to recognize the collection by the types it contains.  I can have a method which accepts a List of ObjectX and not a List of ObjectY (those could be handled by another method by the same name but with a different parameterized input type).  Enforcing what gets inserted into the list just helps facilitate using that signature later.</p>

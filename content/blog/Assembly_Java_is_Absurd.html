@@ -1,0 +1,11 @@
+title=Assembly Java is Absurd
+date=2006-12-06 12:27:36.456
+type=post
+status=published
+tags=Mobile, Java
+~~~~~~
+<p>I've been knee-deep in my studies of object oriented design patterns, refactoring, Java EE, and Java ME.  Today I finally took a moment to read over this article about <a href = "http://blog.javia.org/?p=31">Assembly Java</a> purporting that I throw it all away in favor of complex, but small, unmaintainable blobs of code.</p>
+<p>Just like assembly language may have been great for pulling reasonable performance out of the old Intel 8088 processors, I'm sure these tips were great for the tiny MIDP 1.0 devices from 2001.  Today's devices are just getting bigger and more powerful, so there's no way I'm giving up the maintainability of my code to write everything like this.  A few of these tips could be applicable within isolated subsystems which can exist as black boxes, but I'd never be able to work like this from start to finish.  It's just premature optimization.</p>
+
+<p>We don't actually truncate all our symbol names down to single letters to save space, or think too extensively about dropping those stray extra classes from libraries we use -- that's the job of the class obfuscater.  I only expect to see these Assembly Java tips really implemented as some aggressive switches to an obfuscater or some similar tool.
+To do this stuff across your entire code base would just cripple your ability to grow and adapt your software.  I can't see it being worth the pain.</p>

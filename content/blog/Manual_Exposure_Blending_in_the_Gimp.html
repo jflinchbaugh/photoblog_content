@@ -1,0 +1,13 @@
+title=Manual Exposure Blending in the Gimp
+date=2008-10-07 05:00:34.922
+type=post
+status=published
+tags=Linux, Computers, Photography
+~~~~~~
+<p>I've been watching people post HDR images for months, and I recently stumbled upon <a href =  "http://meetthegimp.org/episode-025-a-winter-morning/">Meet the Gimp: Episode 25</a> which discusses exposure blending.  The hard part was defining a clean mask for blending the images.</p>
+<p>It's not the crazy tone-mapping stuff, but this technique allows for some relatively natural looking changes.</p>
+
+<p>Blending can be done by copying the layer with the most contrast (or darkness), and applying a Threshold to it, and adjusting the slider to get a clean edge.  Then invert, and copy that black-and-white threshold image to be a mask for your top layer.  A little hand painting and Gaussian blur finishes up the mask, and it should look pretty decent.</p>
+<p>My <a href = "http://gallery.hjsoft.com/gallery2/v/Photography/Nature_Photography/DSC_4797.jpg.html">sunflower</a> image is an example of using this technique with 3 exposures pulled from one RAW image.  The threshold and blur helped immensely to help define the edge between plants and sky with minimal halos.</p>
+<p><a href = "http://gallery.hjsoft.com/gallery2/v/Trips/2008-10-05_Peddlers_Village/DSC_7047_01.jpg.html">Wall-E</a> is another example, but I used the technique to blend different saturations for emphasis of the subject, and deemphasis of the background.</p>
+<p>I've recently noticed a few Exposure and Blending Mask options in Gimp's Photo filters, but I've not had a chance to see what they do -- maybe it's the more automatic way to do some of this stuff.</p>

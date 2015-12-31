@@ -1,0 +1,7 @@
+title=Search
+date=2004-01-12 17:01:16.934
+type=post
+status=published
+tags=Java, Blog Code
+~~~~~~
+<p>This J2EE stuff gets incredibly simple when you know what you're doing.  The article search that I just added only took a few hours to code, and it's even implemented <i>correctly</i>.  I wrote a simple little Data Access Object (DAO) which builds and executes the query and returns the keys of matching articles.  Then I use the EJB's <code>findByPrimaryKey()</code> method to actually get the full records.  Struts made stringing together a new set of pages quite easy as well.</p>

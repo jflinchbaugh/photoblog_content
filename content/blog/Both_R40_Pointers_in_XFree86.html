@@ -1,0 +1,41 @@
+title=Both R40 Pointers in XFree86
+date=2005-05-27 12:51:31.142
+type=post
+status=published
+tags=ThinkPad R40, Linux
+~~~~~~
+<p>I figured out how to get both pointer devices on my R40 working to their fullest capacities.  When I switched to the Synaptics driver to get all the slick touchpad features, I lost my trackpoint.  This wasn't a big deal, since I don't use the trackpoint, but it <em>does</em> have 3 buttons, so it could be nice to have.  I just got it working now by adding a second pointer and using the 2 different input mouse devices.</p>
+
+<p>Here's an excerpt from my XF86Config-4:</p>
+<pre>Section "ServerLayout"
+    ...
+    InputDevice    "Synaptics" "CorePointer"
+    InputDevice    "TrackPoint" "CorePointer"
+EndSection
+Section "InputDevice"
+    Identifier  "Synaptics"
+    Driver      "synaptics"
+    Option      "Protocol" "auto"
+    Option      "ZAxisMapping"          "4 5"
+    Option      "Device" "/dev/input/mouse0"
+    Option      "Emulate3Buttons" "true"
+    Option      "Emulate3Timeout" "70"
+    Option      "SendCoreEvents"  "true"
+    Option      "SHMConfig" "on"
+    Option      "EdgeMotionUseAlways" "yes"
+    Option      "EdgeMotionMinSpeed" "1"
+    Option      "EdgeMotionMaxSpeed" "100"
+    Option      "LeftEdge" "1300"
+    Option      "RightEdge" "5400"
+    Option      "TopEdge" "1400"
+    Option      "BottomEdge" "4400"
+EndSection
+Section "InputDevice"
+    Identifier  "TrackPoint"
+    Driver      "mouse"
+    Option      "Protocol" "auto"
+    Option      "Device" "/dev/input/mouse1"
+    Option      "SendCoreEvents"  "true"
+EndSection</pre>
+<p><b>Update (27 May 2005):</b>
+A couple months ago, I found that my trackpoint stopped functioning some time along the way.  It seems that a newer kernel (I'm at 2.6.12-rc5 currently) managed to bump the trackpoint from <code>mouse1</code> to <code>mouse2</code>.  With that adjustment to my XF86Config-4 file, I have the trackpoint, and more importantly, the top 3 buttons functioning again.</p>

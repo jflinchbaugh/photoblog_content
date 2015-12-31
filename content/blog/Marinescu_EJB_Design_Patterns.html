@@ -1,0 +1,11 @@
+title=Marinescu's EJB Design Patterns
+date=2004-10-22 11:38:44.511
+type=post
+status=published
+tags=Work, Java, Blog Code, Books
+~~~~~~
+<p>A coworker lent me a paper copy of <a href = "http://www.theserverside.com/books/wiley/EJBDesignPatterns/index.tss">Floyd Marinescu's EJB Design Patterns</a>, and I just finished reading it.  It had some nice tidbits and explanations, so I may have been convinced now to do some things differently.</p>
+<p>I'll probably start doing most of my finders and even read-only views of data in DAO instead of hitting the entity beans, and I'll reserve the entities for updates. The automatic caching, pooling, and other neat features of entity beans just don't justify the pain of rigid finders and heavy transactions if I'm just reading the data.</p>
+<p>I may also opt to try using DTOFactories and custom DTOs in place of the XDoclet-generated value objects.  XDoclet value objects can quickly get messy when trying to have it load data from related entity beans (endless recursion), and it's more efficient to tailor DTOs to the data needed on-screen than to return large domain objects.  It seems to make good sense to keep the DTO code out of the entity bean as well.  I need to let the session facade do the work of populating a new entity instance instead of ejbCreate() doing it.  That's just not very flexible, and requires the web tier to do too much work setting up DTOs to pass back to the session facade.</p>
+<p>The HashMap-backed DTO seems like an interesting idea as well, but feels just a little too loose to me.  We'll see if I'm drawn down that path or not.</p>
+<p>Before I get to any of these interesting refactorings, I must finish up my code to allow full editing of links. I've not been devoting any time to it, and it's been coming along painfully slowly.  I often forget exactly what I was doing, since I have all these other ideas floating around too.</p>

@@ -1,0 +1,11 @@
+title=NFS Challenges with the NAS
+date=2008-11-03 07:49:59.614
+type=post
+status=published
+tags=Linux, Computers, Technology, Home
+~~~~~~
+<p>I had my SimpleShare NAS working nicely for a while, but something's changed, and I'm not sure what.</p>
+<p>My Debian and Ubuntu machines seem to be using the NAS over NFS as only the nfsnobody (uid -2) user only.  The NAS seems to be in <code>all_squash</code>, so I'm creating files, then I'm not able to manipulate or access some of the files.  I often can't change permissions either -- operation not permitted.  I used to get my regular Linux UIDs on the NAS.</p>
+<p>Interestingly, the Mac still has full access to the NAS over NFS, and I have permissions to fix up permissions as necessary.</p>
+<p>What's the difference between the Linux client and Mac client, and how'd I break the Linux machine?</p>
+<p>Hopefully, I'll be able to report a fix here soon.</p>

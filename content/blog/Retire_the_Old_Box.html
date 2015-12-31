@@ -1,0 +1,10 @@
+title=Retire the Old Box?
+date=2005-04-04 12:17:10.902
+type=post
+status=published
+tags=Linux, Computers
+~~~~~~
+<p>My Gentoo box continues to be problematic.  I can't get emerge to successfully build a new gcc, and I can't even build gcc by hand.  The gcc I have installed right now was built on my big server, and it managed to build other things, including glibc.  I can't get gcc to build though.</p>
+<p>It seems like a memory issue, but memtest86 doesn't turn up any errors.  It's so hard to determine what's really at fault without just wiping the box and starting over.  Running with the assumption that it's still a hardware issue, I'm going to try adjusting the CPU clock down to 198MHz from 207MHz.</p>
+<p><b>Update (04 April 2005):</b> After clocking it down (66MHz * 3.0), it built gcc, finally.  Then I had to get through a few other hiccups of reinstalling some packages, but now I got it completely updated.  I'm working on a new kernel for the box, and I'm installing the various DVD tools.</p>
+<p>I should have the DVD burner installed very soon.</p>

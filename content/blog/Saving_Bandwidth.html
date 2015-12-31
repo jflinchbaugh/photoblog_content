@@ -1,0 +1,25 @@
+title=Saving Bandwidth
+date=2004-05-10 12:28:47.912
+type=post
+status=published
+tags=Java, Blog Code
+~~~~~~
+<p>My weblog seems to load slowly over the cablemodem, so I was investigating a bit and found that it was tallying up 76KiB for the whole page.  This was considerably larger than most other pages, like other weblogs or even the busier yahoo.com.</p>
+
+<p>One trick I noted at yahoo was that they eliminate all white space.  This is probably a good practice, but I couldn't bare to do it in my actual JSP code -- It would just be too messy for development purposes, but I admit that it doesn't need to be there in the final page.</p>
+<p>JSP 1.2+ has an XML syntax which uses <code>&lt;jsp:root&gt;</code> to encapsulate the entire page and necessitates other changes within the JSP.  I successfully applied this to the simplest of cases, my redirecting <code>index.jsp</code>, but I had trouble with more complex examples.  Once you start using the XML syntax, the entire JSP file must become well-formed XML.  I ended up with lots of <code>&lt;![CDATA[]]&gt;</code>s all over the place to escape HTML tags I wanted to construct from dynamic data, like this old style code:
+<br/>
+<code>&lt;a href = &quot;&lt;%= request.getContextPath() + &quot;/home&quot; %&gt;&quot;&gt;</code>
+<br/>
+It got very ugly.  On top of that, the browser got the idea that the whole page was <code>text/xml</code> instead of <code>text/html</code> and refused to render it correctly.  I had to abandon it for now, even though it was successfully rendering the XML bits  nicely without the extra whitespace.</p>
+<p>While a filter could eliminate whitespace, I doubt it would ultimately work, since the whitespace would actually need to be preserved in content which uses <code>&lt;pre&gt;</code> tags.  I had read a rumor that Tomcat may have such a functionality, but I haven't found it documented anywhere.  Lastly, I still hope to find a preprocessor ant task which can eliminate the whitespace in JSP files before they are packaged.  This would leave my source intact as I like to see it.</p>
+<p>My front-end Apache 2 server has the <code>deflate</code> module loaded as well.  I would expect standard compression to lessen the effects of my extra whitespace, but I've not proven to myself that it's actually working.</p>
+<p>The good news was that I managed to trim 30KiB from the file by eliminating the Struts <code>&lt;html:javascript/&gt;</code> tag from the layout file, since I'm not using any of the Struts Validation stuff yet.</p>
+<p><strong>Update:</strong> Ah ha!  I had Apache's <code>mod_deflate</code> loaded, but not enabled.  I can definitely tell a difference with it enabled, and it accomplishes the same thing that the GZip servlet filter does.  Implementing that compression at the application layer just doesn't seem quite right.  If it's something every application should have, then it should be applied at the web server level.</p>
+<p><strong>Update (10 May 2004):</strong> More advice: don't skimp on the recommended configurations.  In particular, I've added these lines:
+<pre>
+SetEnvIfNoCase Request_URI \
+   \.(?:gif|jpe?g|png|js|css)$ no-gzip dont-vary
+Header append Vary User-Agent env=!dont-vary
+</pre>
+Without these, I was getting random failures and corruptions in mozilla-firefox, since it seemed to sometimes not get the whole gzip stream.</p>

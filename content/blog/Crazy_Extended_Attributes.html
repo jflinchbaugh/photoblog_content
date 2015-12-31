@@ -1,0 +1,11 @@
+title=Crazy Extended Attributes
+date=2006-02-06 08:23:40.682
+type=post
+status=published
+tags=Linux, Computers
+~~~~~~
+<p>Linux 2.6.15.2 came out, so I rebooted butterfly last night at midnight expecting only the normal reboot issues with that server.  I got much more exciting issues!  For some reason, large numbers of files and directories all over the machine had interesting combinations of extended attributes (most notably <em>immutable</em> flags), which caused lots of noise at boot as files couldn't be updated.</p>
+<p>I recursively cleared all the attributes to get moving again, but I still have a few straggler files which refuse to be removed, moved, or replaced even though their attributes appear to be clear.  I guess I'll be doing a reiserfsck on the whole system tonight.</p>
+<p><b>Update (6 February 2006):</b> I ended up going back to 2.6.15.1.  Apparently extended attributes weren't working there anyway, so I don't see this issue.  My notebook has no trouble, and it <em>can</em> use the extended attributes.  The filesystems checked out fine, so I wonder if I'll end up just rebuilding the filesystems completely someday, just to get past kernel 2.6.15.1.</p>
+<p>I'm not confident enough that I know what is happening to try to report it to the kernel mailing list.  Additionally, I can't afford much down time on the server to test patches.</p>
+<p>I'm hoping it may just go away with a newer kernel, since there may have been other odd interactions with SCSI, since some kernels through SCSI parity errors while trying to rebuild the reiser tree, and others behaved fine.  I was using the new 2.6.15.2, and Knoppix' 2.6.12, I believe.  I forget which displayed which errors.</p>

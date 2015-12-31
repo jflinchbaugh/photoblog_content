@@ -1,0 +1,12 @@
+title=Ubuntu 8.10 on the Old ThinkPad R40
+date=2008-11-09 10:30:38.375
+type=post
+status=published
+tags=Technology, ThinkPad R40, Linux, Computers
+~~~~~~
+<p>The wireless interface on the old ThinkPad R40 running Debian Unstable flaked out and stopped associating with the wireless access point at home.  I thought the hardware was failing, like the USB failed months ago, but I wanted a second opinion -- was it really broken, or am I just incompetent?</p>
+<p>I booted an Ubuntu 8.10 live CD, and found that it got the wireless running right away!  Encouraged, I backed up the useful home directories, wiped the existing partitions, and ran the install.</p>
+<p>Upon installing, and booting for the first time, I logged in to have it pick up the wireless again right away from the little NetworkManager applet, and then offer me software updates.  During the update, it told me that my old 25M <code>/boot</code> partition was too small, so I moved those files onto the <code>/</code> partition and abandoned the old 25M partition.  After a few reboots and twiddling around the grub config, I got it booting from the new partition again.</p>
+<p>That pretty much had the computer up and running on the network again! I've since poked at it a little bit to find that Ubuntu has the whizzy compiz effects working out of the box.  Surprisingly, I also see all the little ACPI interfaces working down to being able to control screen brightness.  Finally, I tested the suspend and hibernate, and even that's working! The machine even woke up from suspend and hibernate! ;)  I'll have to see if the machine continues to run or reverts back to crashing 10 minutes after resume, like it used to do.  I'm sort of hopeful at this point.</p>
+<p>It's amazing to see all these things work out of the box, since I had to configure and script this stuff all up by hand on the previous install from 4 years ago or so.  Just when I started to think about not having time to run Linux on the desktop, Ubuntu proves to be slick and usable.  Now I want a new Linux notebook.</p>
+<p><strong>Update (2008-11-9):</strong> Claire let me know that the machine still locks up occasionally after a resume, so I disabled that.  I was hoping to see that fixed with the Ubuntu install.</p>

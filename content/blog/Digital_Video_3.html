@@ -1,0 +1,12 @@
+title=Digital Video, Part 3
+date=2003-11-29 00:18:31.674
+type=post
+status=published
+tags=Computers
+~~~~~~
+<p>Even though we've decided to keep the Samsung camera, I still needed to get the video off the Canon, which previously did not talk to the computer.  I found that the tapes aren't strictly compatible, since the Samsung would play the Canon's tape, but it showed strange blocks dancing through the image at times.</p>
+
+<p>with some screwing around, I found that I could get the Canon to be recognized by my linux server if I unloaded all the 1394 modules, plugged in the camera, then loaded  <code>dv1394.o</code>, which pulled in <code>ohci1394.o</code>, <code>ieee1394.o</code>, and <code>raw1394.o</code>.  Then <code>dvgrab</code> could see the camera, but <code>kino</code> still couldn't.  I decided to just dump the whole thing with <code>dvgrab</code> and just load the captured video into <code>kino</code> later.</p>
+<p>So now, I have 2 mostly-full SCSI drives and no where to go.  Claire and I started editting down videos, so hopefully I can clean up some of that space soon.  Surprisingly, Claire seems to like playig with <code>kino</code>, so it must be a very nice piece of software.  Score 1 more point for the linux desktop!</p>
+<p>And in temptation and shopping news, my full hard drives make a nice case for adding storage.  Also, I'm pretty convinced now that the video and sound sharing the PCI bus is causing my sound issues on my more-than-adequate dual Athlon server, so an AGP video card seems in order.  I can then get a card with TV out, so I can get finished videos on VHS if I need.  Otherwise, I'll see what formats I can burn to CD and have read by my DVD player.</p>
+<p>SVCD format seems nice, but VCD looks just as good in half the space.  Generic MPEG seems to be the same size as VCD, but the quality doesn't compare.   VCD also sounds more like it may work for the consumer DVD player.</p>

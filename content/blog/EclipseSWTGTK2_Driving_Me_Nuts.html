@@ -1,0 +1,20 @@
+title=Eclipse/SWT/GTK2 Driving Me Nuts
+date=2005-08-23 15:44:45.121
+type=post
+status=published
+tags=Linux, ThinkPad R40, Java, Computers
+~~~~~~
+<p>GTK has been driving me nuts recently, since I've realized that I can't figure out how to change the font size of the GTK widgets.  In particular, I can't shrink the size of the Tree widget that's used by Eclipse on SWT on GTK2.</p>
+<p>Within Eclipse, I have all the fonts shrunken, so I can fit more on my mere XGA (1024x768) ThinkPad screen, but the trees and menus still insist on rendering at 12- or 14pt fonts.</p>
+
+<p>I've poked around in <code>gnome-font-properties</code>, and I've even tried adding promising bits to my <code>~/.gtk*</code> files, but nothing seems to actually affect the fonts.</p>
+<p>Someday I'll stumble upon a way to do it, and until then, I'll have to fight the current distraction of not being able to do it.</p>
+<p><b>Update (23 August 2005):</b> <a href = "http://www.shoutstudios.com/~doug/blog/">Doug</a>'s Gnome 2.8 install on his Gentoo box applies the "Application Font" uniformly around menus, panels, trees, everything.  My Debian Gnome 2.10 does not behave so admirably.  The "Application Font" seems to be ignored by all GTK applications.  Even a fresh user with fresh configurations exhibits the problem.</p>
+<p>Further googling around with this new context still reveals nothing useful, so I guess I'll submit a bug with Debian.</p>
+<p><b>Another Update:</b>  I've found the right lines to add to my .gtkrc-2.0:</p>
+<pre>style "user-font" {
+    font_name = "Sans 10"
+}
+widget_class "*" style "user-font"
+</pre>
+<p>Now all my GTK apps have the smaller fonts.</p>

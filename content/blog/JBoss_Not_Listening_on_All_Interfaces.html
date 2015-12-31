@@ -1,0 +1,9 @@
+title=JBoss Not Listening on All Interfaces
+date=2003-12-31 09:49:55.539
+type=post
+status=published
+tags=Java
+~~~~~~
+<p>I start my JBoss 3.2.3 server with <code>run.sh --host=127.0.0.1</code> to have it listen only on localhost, and not directly accessible to the outside world.  I found that  the naming service was still looking up the hostname and serving that hostname and IP for RMI connections.  This meant that clients (like shutdown.jar) would successfully lookup a service, but then try to connect to it on the outside interface which wasn't listening.  I'd get a <code>ConnectException</code> when trying to use the <code>shutdown.sh</code> command even though I had specified <code>--server=127.0.0.1</code>.</p>
+<p>To fix this, I added the <code>-Djava.rmi.server.hostname=127.0.0.1</code> to my <code>JAVA_OPTS</code> in my <code>run.conf</code>.</p>
+<p>The <code>--host</code> option sets <code>jboss.bind.address</code>.  I wonder if it could be made to override <code>java.rmi.server.hostname</code> as well.</p>

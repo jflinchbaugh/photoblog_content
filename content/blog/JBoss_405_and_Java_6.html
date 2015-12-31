@@ -1,0 +1,11 @@
+title=JBoss 4.0.5 and Java 6
+date=2007-01-10 07:15:55.622
+type=post
+status=published
+tags=Java, Computers, Linux, Blog Code
+~~~~~~
+<p>I've had Java 6 running on my notebook since a couple days after its release.  For some reason, the Debian people are being a bit slow at getting Java 6 packaged, and they seem to not want to bother updating <code>java-package</code> in the meantime.  Fortunately, I could hack up <code>java-package</code> myself to make it work, and I very recently found a cleaner <a href = "http://www.mail-archive.com/pkg-java-maintainers@lists.alioth.debian.org/msg04406.html">patch</a>.</p>
+
+<p>Trying to upgrade to JBoss 4.0.5 had been giving me <a href = "http://www.hjsoft.com/blog/link/More_Classloading_Issues_with_JBoss_405">fits</a> previously as well, but the GA release of the JBoss <a href = "http://labs.jboss.com/portal/jbossas/download">JEMS Installer 1.2.0</a> actually gets the thing configured properly for me to make it work. </p>
+<p>I told the installer to do a <em>Standard</em> install instead of Advanced, then just flipped the 3 bits mentioned in the release notes (and lots of other places) to isolate applications from each other and avoid ClassCastExceptions.  Previous versions of the installer just didn't quite line things up correctly, and I started to think it was a bug in the application server code.</p>
+<p>Once I got this all working on my notebook, I pushed it up to the server successfully.  I hadn't initially planned to jump to Java 6 on the server yet, but I ran into class verification errors when I tried deploying my application (compiled on Java 6) into the server running Java 5.</p>

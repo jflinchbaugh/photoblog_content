@@ -1,0 +1,22 @@
+title=Ubuntu on EeePC 1201N
+date=2010-12-07 19:55:26.208
+type=post
+status=published
+tags=Computers, Linux
+~~~~~~
+<h1>New Machine</h1>
+<p>Back in the summer after being laid off at <a href = "http://www.mapquest.com/">MapQuest</a>, I needed a new primary notebook computer, so I bought a 12-inch netbook&mdash;the Asus EeePC 1201N.  I chose this machine, because I wanted something light, portable, inexpensive, and the higher resolution of the 12-inch display was more practical that the 1024x600 displays of the 10-inch netbooks.  The machine also has a dual-core hyperthreaded Atom processor, so it shows up as 4 CPUs on this little machine.</p>
+
+<h1>Ubuntu 10.04</h1>
+<p>As soon as I got it, I booted an SD card with <a href = "http://ubuntu.com/">Ubuntu 10.04</a> desktop installation image, and I was off. The install ran smoothly as expected, and I rebooted to the new OS.  I went about installing all my normal user, photography, and developer tools.  I also included the wireless backport modules based on my previous experience with Claire's EeePC.  I'm not sure the backports were necessary on this machine, though&mdash;I don't think it made much of a difference.</p>
+<p>I was sort of annoyed to have to load the NVidia drivers and config panels, but it seems to be nearly unavoidable these days.  At least it seems to just work.  The HDMI output even works with my TV, so I guess I can't complain.</p>
+<h1>Performance</h1>
+<p>I can run Eclipse and Sun Wireless Toolkit fine on the machine, as does the Android SDK, though I try to not keep too many projects open at once.  Grails development at the command-line (in vim) goes quickly enough, though I can tell this machine's a little slower than my bigger desktop machines.  My normal build, test, report cycle completes in under 2 minutes.</p>
+<p>I've used the machine as my primary photo processing machine (digikam, Gimp, Rawstudio) when I was on vacation for a week or when I'm in my photography class.  It does fine, but working with lots of images can be slow compared to the Athlon X2 server where I usually do that work.</p>
+<p>For browsing, music, and podcatching the machine has plenty of power.</p>
+<h1>Problems</h1>
+<p>From the beginning, suspend (memory) and hibernate (disk) worked, but sometimes a memory issue (maybe loose) would cause it to shutdown while suspended and boot up with half the memory working.  This problem seems to have gone away on its own.  After the Ubuntu 10.10 upgrade, I'm still working to get hibernate working again, but I still have suspend.</p>
+<p>I fought for a couple weeks trying to get good old CPU frequency scaling to work.  I could manage to force the module to load, but it would cause all sorts of latency and pauses, and it didn't save any power.  It turns out that this processor is already optimised enough for power saving, so I gave up in the end and just let it run full speed all the time.  Currently, I can count on about 3 hours of battery.</p>
+<p>The wireless network was fine until I took the machine to my new job.  On the work wireless network, the connection becomes flaky when it tries to hop channels and access points.  I haven't figured out how to fix this yet, but I worked around it by just using the wired connection while I'm there.</p>
+<h1>Small and Generic Wins</h1>
+<p>Despite some problems, I'm still impressed enough with it that I've ordered a third netbook for the house.  I really wanted to buy another 1201N, but they're not available, so I bought an AMD-based EeePC 1215T. (The 1215T is even easier to setup.)  I really love the 12-inch netbook form-factor, and it's worth the performance trade offs in the type of computing I do, and the relatively generic hardware makes it easy to run Linux.</p>

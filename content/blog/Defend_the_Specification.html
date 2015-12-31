@@ -1,0 +1,8 @@
+title=Defend the Specification
+date=2003-12-16 11:46:23.111
+type=post
+status=published
+tags=Java
+~~~~~~
+<p>Some people expect that they can rely on the interaction spec to know how their system will be integrated with other tiers.  <i>Relying</i> upon this spec and not accommodating and at least recovering from deviations creates a fragile tier, and then it <i>is</i> your problem.  You can't just blame the other tier for not following the spec.</p>
+<p><i>Defend</i> the specification, not rely upon it.  Insist that the other tiers follow the spec or fail the transaction gracefully.   We don't need to accommodate and fix their errors, but we can't let them throw our tier into an unstable state.  Blaming the other tiers for your tier's instability is not acceptable.</p>

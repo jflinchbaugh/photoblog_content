@@ -1,0 +1,8 @@
+title=Emailing My Phone From Log4J
+date=2007-08-07 11:32:27.811
+type=post
+status=published
+tags=Java, Computers, Mobile, Web Dev, Blog Code
+~~~~~~
+<p>I have JBoss' log4j configured to email my mobile phone using the <code>SMTPAppender</code>.  My SE W810i didn't seem to want to display the messages with stacktraces, though.  It said the message used an unsupported encoding.</p>
+<p>By adding the <code>&lt;param name = "Encoding" value = "iso-8859-1"/&gt;</code> parameter to the appender configuration (<code>jboss-log4j.xml</code>), I forced the messages down to an encoding that my phone does understand, and now it works nicely.</p>

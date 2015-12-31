@@ -1,0 +1,28 @@
+title=Notes on Blog Development
+date=2003-10-27 17:40:48.522
+type=post
+status=published
+tags=
+~~~~~~
+<p>You'll notice my little browser recommendation on the left.  That may be the only visible change in here right now.  Paging code is wrapped in here, but not complete, so it's not evident yet.  The paging code that <i>is</i> here helps load the recent 10 more efficiently.  (I moved the pagingn code back into the EJB tier.)</p>
+<p>I did a bunch of stuff trying to track full state (expand, page, etc) in the url (for consistent linking), but ended up trashing most of it due to extreme complexity.  It shakes my faith in my ability to do web apps.</p>
+<p>Things to work on:
+<ul>
+<li>complete paging (with tracking in session)</li>
+<li>referer logs</li>
+<li>permalinks</li>
+<li><i>incomplete</i> flag to allow working on blog entries live without making them visible</li>
+<li>topics</li>
+<li><i>updated date</i> field in addition to creation date</li>
+<li>rss feed (topic-based, so I don't feed garbage to java.blogs)</li>
+<li>maybe move state info from session to url</li>
+<li>session/cookie for expand option</li>
+<li>remember commenter info in cookie</li>
+<li>search</li>
+<li>figure out trackback/ping</li>
+<li>subscription-based email notification of comments</li>
+<li>calendar</li>
+<li>dropdown list of other blogs for my bookmarks of ones i read</li>
+</ul>
+</p>
+<p>Anyone else have any slick ideas of what a blog should do?</p>

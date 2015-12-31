@@ -1,0 +1,12 @@
+title=Reloading CSS, etc
+date=2007-09-18 14:07:56.682
+type=post
+status=published
+tags=Computers, Linux, Blog Code
+~~~~~~
+<p>As I deployed the new version of the <a href = "http://www.k-prep.com/">K-Prep site</a>, I was having trouble getting clients to get the new versions of the CSS files.  It stayed cached in the browsers.</p>
+<p>To make sure it doesn't happen again, I've dropped a configuration into my Apache 2 server to expire CSS files immediately, and require the browser to at least ask the server if there's been an update.  This doesn't make the server unnecessarily transfer the file with every request -- it returns an HTTP 304 code to indicate that the cached copy is still up-to-date.  I should probably do something similar for other notoriously cached files, like scripts.</p>
+<pre>&lt;IfModule mod_expires.c&gt;
+    ExpiresActive On
+    ExpiresByType text/css A0
+&lt;/IfModule&gt;</pre>

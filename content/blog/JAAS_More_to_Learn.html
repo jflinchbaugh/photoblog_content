@@ -1,0 +1,9 @@
+title=JAAS: More to Learn
+date=2004-06-11 07:22:40.222
+type=post
+status=published
+tags=Java
+~~~~~~
+<p><a href = "http://www.ftponline.com/javapro/">JavaPro</a> has a pretty extensive <a href = "http://www.ftponline.com/javapro/2004_06/magazine/features/kjones/default.aspx">article on JAAS</a> (Java Authentication and Authorization Service).  The idea is to have a pluggable authentication system, so your application doesn't have to implement it, and it can easily be changed later.  The article calls it "simple", but I'm not convinced just yet.  I need to study up on it a bit more.</p>
+<p>I had used it on my first successful personal J2EE application, my wedding website.  JBoss provided a couple JAAS modules, one of which was driven by database tables, so I could easily get it to look up users in my wedding guest table.  I hadn't realized it at the time, but that module was very JBoss-specific, and when I tried to do similar things in Weblogic, their DB module was much more complicated, and I couldn't quite figure it out.</p>
+<p>I looked into writing my own, but Weblogic's support for standard APIs didn't seem to be complete, and they relied upon some Weblogic-specific interfaces, so I became completely disgruntled with JAAS and abandoned it.  Maybe now that it's had a few years, it'll be better supported.  Of course, I'd only be testing against JBoss these days, so I may not learn much new.</p>

@@ -1,0 +1,10 @@
+title=Simple Blog Optimizations for JBoss
+date=2004-04-08 08:17:24.103
+type=post
+status=published
+tags=Blog Code, Java
+~~~~~~
+<p>I've been tuning my blog for JBoss recently, and hopefully you can feel it a bit in this site's load time.</p>
+<p>JBoss 3.2.3 has a <a href = "http://www.darkwolf.ws/blog/blojsom/java/?permalink=48A305960F60C205C14F6E6B23A5C630.txt">little bug</a> causing it to always write dates back to the database, even though they didn't change after every transaction.  I noticed even on my dual Athlon, this could take a full second to commit everything back.</p>
+<p>Instead of installing the a 3.2.4RC version of JBoss or patching up the source myself, I just tagged all my getter methods as read-only: <code>@jboss.method-attributes read-only = "true"</code> (in Xdoclet).</p>
+<p>Additionally, I merged in a container config which enables commit-option A (allows more caching, since JBoss can assume the database won't change out from under it).  Lastly, I enabled read-ahead on find.  This causes more data to be read, but it does it in fewer queries.  The values are loaded now in the single find statement, not in subsequent load queries. (<code>@jboss.read-ahead strategy = "on-find"</code>)</p>

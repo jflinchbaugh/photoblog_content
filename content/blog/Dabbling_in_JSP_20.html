@@ -1,0 +1,16 @@
+title=Dabbling in JSP 2.0
+date=2004-12-17 10:40:45.738
+type=post
+status=published
+tags=Java, Web Dev, Blog Code
+~~~~~~
+<p>I've switched to JSP 2.0 in my blog code and eliminated my JSTL <code>&lt;c:out&gt;</code> statements in favor of EL <code>${expressions}</code>.  It seems I'll only need to use <code>&lt;c:out&gt;</code> when I want to have it escape the XML entities in output, since EL doesn't filter at all.  The new syntax is much nicer to use in the code, especially when used in an attribute of another HTML tag, such as an <code>href</code>.</p>
+
+<p>Convincing Tomcat to interpret the JSP 2.0 expression language required me to switch to the new XMLSchema in place of the old web.xml DTD:</p>
+<pre>&lt;web-app
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4"&gt;</pre>
+<p>To ensure that JSTL understood the embedded EL, I also needed to convert all my <code>&lt;%@taglib%&gt;</code> to import the <em>_rt</em> versions of the taglibs, so <code>http://java.sun.com/jstl/core</code> became <code>http://java.sun.com/jstl/core_rt</code> and <code>http://java.sun.com/jstl/fmt</code> became <code>http://java.sun.com/jstl/fmt_rt</code>.</p>
+<p>I also managed to switch to valid XHTML Strict, and added a CSS check.  Of course, now that I've deployed it, I notice that Struts' form tags aren't XHTML Strict compliant. *sigh*  The <em>name</em> attribute on <code>&lt;form&gt;</code> is invalid.</p>

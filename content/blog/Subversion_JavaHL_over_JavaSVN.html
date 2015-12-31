@@ -1,0 +1,9 @@
+title=Subversion JavaHL over JavaSVN
+date=2006-09-12 12:53:36.763
+type=post
+status=published
+tags=Computers, Java, Linux
+~~~~~~
+<p>Subversion 1.4.0 hit Debian Unstable a day or 2 ago, so I happily upgraded my source repository server and development machine.  Then I found that Subclipse using JavaSVN got sort of unhappy with my choice -- throwing "Malformed network data" errors.</p>
+<p>The Debian release notes mentioned that <code>svn</code> will automatically upgrade an older working copy to use the new 1.4 formats, so I was being really careful to not touch my working copy with anything but JavaSVN for now.  After chewing up my working copy badly enough with JavaSVN, I finally added <code>-Djava.library.path=/usr/lib/jni</code> to my <code>eclipse.ini</code>, and switch Subclipse to use the native JavaHL bindings which would use the official 1.4.0 Subversion libraries.  That's working nicely now, and it's <em>fast</em>.  I may stick with this configuration for a bit even when I see a newer JavaSVN/Subclipse come across the update site.</p>
+<p>I had chosen JavaSVN previously to maintain "Java purity", and I also think the native JavaHL libraries may not have been available by default through Debian.  I'm not sure.  It's working now, though.</p>

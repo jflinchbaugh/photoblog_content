@@ -1,0 +1,9 @@
+title=GStreamer General Resource Error
+date=2006-11-15 08:41:30.404
+type=post
+status=published
+tags=Linux, Computers
+~~~~~~
+<p>Rhythmbox seemed unhappy with some of my incoming podcasts, quietly refusing to import them with the note: <em>GStreamer encountered a general resource error.</em></p>
+<p>This <a href = "http://ubuntuforums.org/showthread.php?t=270371">Ubuntu forum thread</a> suggested removing the <code>gstreamer0.10-fluendo-mp3</code> package in favor of letting <code>gstreamer0.10-plugins-bad</code>, or in my case <code>gstreamer0.10-plugins-really-bad</code> from <a href = "http://www.debian-multimedia.org/">debian-multimedia.org</a>.
+Now those files import just fine.  Among the regular offenders were <a href = "http://www.talkcrunch.com/">TalkCrunch</a>, <a href = "http://drunkandretired.com/podcast/">Drunk and Retired</a>, and <a href = "http://redmonk.libsyn.com/">RedMonk Radio</a>.</p>

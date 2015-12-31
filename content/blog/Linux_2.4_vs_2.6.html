@@ -1,0 +1,11 @@
+title=Linux 2.4 vs 2.6
+date=2003-09-15 17:08:01.6
+type=post
+status=published
+tags=
+~~~~~~
+<p>I keep bouncing around between kernel generations.  My kernel mood changes with my setting and interests.  Often I find myself feeling all daring and cutting-edge, so I'm running the 2.6-test series to see what's new and lend a hand testing.  For  my day-to-day tasks, 2.6 usually serves me well.</p>
+<p>I put up with certain shortcomings on each side of the fence.  In 2.4, I need to build alsa myself, and it's just not as interesting.  Luckily, the ck patch gets me many of the good toys like O(1) and preemptible kernel.</p>
+<p>In 2.6, alsa's built in, but drm-mach64 always takes some hand-patching, suspend doesn't work, and over the weekend, I found out ppp is broken.  I don't usually need ppp, but when I'm trying to connect to my mobile phone while out of town, it's essential.  The scheduler's also a bit off, so playing music isn't totally smooth.</p>
+<p>I'd love to play with software suspend again, if I could figure out how to properly call it.  It's much faster to intelligently suspend what's actually being used instead of the dumb BIOS dumping all 384MiB.</p>
+<p>So, I'm on my way back to 2.4 for a bit for the sake of my GPRS connection, but I'm sure I'll be back in a couple more versions, if it even takes that long.</p>

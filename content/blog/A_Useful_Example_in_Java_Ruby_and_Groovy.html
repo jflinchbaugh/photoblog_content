@@ -1,0 +1,102 @@
+title=A Useful Example in Java, Ruby, and Groovy
+date=2008-06-04 09:56:06.56
+type=post
+status=published
+tags=Technology, Java, Computers, Work
+~~~~~~
+<p>We've been using Java and Ruby for work, and we've recently been asked to look more toward Groovy where we were using Groovy, so I rewrote a useful little iconv script which we use to re-encode large volumes of data (which the GNU iconv doesn't seem to want to handle).</p>
+<p>For illustration, here are the implementations I wrote:</p>
+<p>Java (40 lines):</p>
+<blockquote>
+<pre>import java.io.*;
+
+public class Iconv {
+    public static void main(final String[] args) throws Exception {
+        if (args.length &lt; 2) {
+            System.out.println(
+                    "Usage: Iconv &lt;in&gt;:&lt;encoding&gt; &lt;out&gt;:&lt;encoding&gt;");
+            return;
+        }
+        
+        final String[] ins = args[0].split(":");
+        final String[] outs = args[1].split(":");
+        
+        final String inFile = ins[0];
+        final String inEnc = ins[1];
+        final String outFile = outs[0];
+        final String outEnc = outs[1];
+        
+        Writer writer = null;
+        try {
+            writer = new OutputStreamWriter(
+                    new FileOutputStream(outFile), outEnc);
+            Reader reader = null;
+            try {
+                reader = new InputStreamReader(
+                        new FileInputStream(inFile), inEnc);
+                Integer character = null;
+                while ((character = reader.read()) >= 0) {
+                    writer.write(character);
+                }
+            } finally {
+                if (reader != null)
+                    reader.close();
+            }
+        } finally {
+            if (writer != null)
+                writer.close();
+        }
+    }
+}</pre>
+</blockquote>
+<p>Ruby (20 lines):</p>
+<blockquote>
+<pre>#!/usr/bin/env jruby
+
+require 'iconv'
+require 'fileutils'
+
+if ARGV.size &lt; 2 then
+    puts "Usage: iconv.rb &lt;from&gt;:&lt;enc&gt; &lt;to&gt;:&lt;enc&gt;"
+    exit
+end
+
+in_file, in_enc = ARGV[0].split(":")
+out_file, out_enc = ARGV[1].split(":")
+
+Iconv.open(out_enc, in_enc) do |conv|
+    File.open(out_file, 'w') do |out|
+        File.open(in_file, 'r').each_line do |line|
+            out.write(conv.iconv(line))
+        end
+    end
+end</pre>
+</blockquote>
+<p>Groovy (19 lines):</p>
+<blockquote>
+<pre>#!/usr/bin/env groovy
+
+if (args.size() &lt; 2) {
+    println "Usage: iconv.groovy &lt;from&gt;:&lt;enc&gt; &lt;to&gt;:&lt;enc&gt;"
+    return
+}
+
+final ins = args[0].split(":")
+final outs = args[1].split(":")
+final from = ins[0]
+final fromEnc = ins[1]
+final to = outs[0]
+final toEnc = outs[1]
+
+new FileOutputStream(to).withWriter(toEnc) { writer -&gt;
+    new FileInputStream(from).withReader(fromEnc) { reader -&gt;
+        writer &lt;&lt; reader
+    }
+}</pre>
+</blockquote>
+<p>Using the Groovy 1.6 beta, I could have used the new left-side array assignment syntax to shorten the groovy version to 15 lines:</p>
+<pre>...
+[from, fromEnc] = args[0].split(":")
+...</pre>
+<p>I had initially set out to skip over Groovy and just learn Ruby, as I had viewed Groovy as a sort of compromise -- Ruby would be the real twist of the mind, but alas, my neural pathways seem a bit more rigid than I had hoped.  I can think a little quicker in Groovy than Ruby and get a few things done.  Groovy is also a bit more compatible with the work directives handed down from on high -- we want to be a Java shop.</p>
+<p><strong>Update (2008-06-04):</strong> I updated the code above to reflect some comments.  To be complete, the Java code should null check the streams it's trying to close in the finally blocks.</p>

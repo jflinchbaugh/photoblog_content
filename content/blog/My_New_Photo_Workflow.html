@@ -1,0 +1,37 @@
+title=My New Photo Workflow
+date=2008-10-07 04:56:21.32
+type=post
+status=published
+tags=Photography, Computers, Linux
+~~~~~~
+<p>I've been tuning my workflow a bit -- the process of pulling images from the camera, processing, editing, and getting them posted.  I still do everything on Linux.</p>
+<h2>Downloading Images</h2>
+<p>To start, gthumb started out very helpful -- the first time I plugged in the Nikon D40, it popped right up and offered to pull the images for me.  I had been using that for months, but eventually, the whole thumbnailing processing got too slow on particularly large downloads.  I didn't need to view the thumbs first, I just need the images, so I wrote my own script to do about the same thing, only faster:</p>
+<blockquote><pre><code>#!/bin/sh
+
+cd ~/photos
+DATE=$(date +%Y-%m-%d-%H-%M-%S)
+mkdir $DATE
+cd $DATE
+LAST=$(gphoto2 -L | tail -1 | cut -d' ' -f1 | sed 's/#//')
+gphoto2 --get-raw-data 2-$LAST --filename %f.%C
+ONDISK_COUNT=$(ls | wc -l)
+EXPECTED_COUNT=$(($LAST - 1))
+echo $EXPECTED_COUNT $ONDISK_COUNT 
+if [ "$ONDISK_COUNT" -eq "$EXPECTED_COUNT" ]; then
+    gphoto2 --delete-file 2-$LAST --recurse
+fi</code></pre></blockquote>
+<p>This downloads the images to a timestamped directory, and clears the camera for me.</p>
+<h2>RAW Processing</h2>
+<p>I open the directory of images in Rawstudio, and quickly rate the images.  I mostly just mark the keepers as '1' and occasionally rate higher for images I want to get processing first.  I delete anything unrated (discarding 90% of my RAW images).</p>
+<p>I make a second pass over the keepers to look for potential deletes, then I get to work processing each image in Rawstudio.  I've not figured out an appropriate way to batch my images through RAW processing yet, so I do each individually.  I straighten, crop, adjust contrast, exposure, and saturation.  After all the images are done, I batch export the JPEGs to another directory.</p>
+<p>Rawstudio 1.1 added the ability to automatically copy the RAW metadata to the JPEG EXIF data, so that saves me an entire script which I would often forget to run.</p>
+<h2>Final Editing</h2>
+<p>I fire up Gimp on each image, and often apply a GREYCstoration to smooth image noise and almost always apply a small-radius (0.9) unsharp mask (at about 1.10 or so).</p>
+<p>I found this <a href = "http://cimg.sourceforge.net/greycstoration/guide.shtml">great guide</a> to using the tunable parameters of GREYCstoration. Read this, and you'll figure out how it's affecting your image.  I play mostly with the Strength, Anisotropy (amount of structure in the image), and sometimes the Noise Scale and Iterations.</p>
+<p>I occasionally get into cloning and healing in Gimp.</p>
+<h2>Uploading</h2>
+<p>I shuffle the finished images into a few directories by trips or themes, and upload each directory to my Gallery 2 install using the (From Server) upload.  Then I push 1 or 2 of the best images up to Flickr via the basic uploader on the website.</p>
+<h2>Archiving</h2>
+<p>The RAWs remaining RAWS go to the NAS for backup, and I'm usually done with my processing within a few hours of plugging in the camera.</p>
+<p>On a gear note, I am starting to think about purchasing a Wacom tablet for editing -- a basic tablet is relatively cheap, and could make some work a lot easier.  It's been a while since I've purchased anything.</p>

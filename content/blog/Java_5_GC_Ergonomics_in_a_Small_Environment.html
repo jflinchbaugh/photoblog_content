@@ -1,0 +1,18 @@
+title=Java 5 GC Ergonomics in a Small Environment
+date=2006-08-30 07:42:17.913
+type=post
+status=published
+tags=Blog Code, Linux, Java, Web Dev, Computers
+~~~~~~
+<p>I've been trying to tune a JBoss instance on a relatively low-memory system (192M physical RAM) for a long time now.  I think my biggest problem was that the Java heap space would get swapped out to disk by the OS, and then GC of any sort would degrade to taking tens of seconds and at times minutes!  For my set of applications, the most effective switches I had found were:</p>
+<ul>
+<li>Set the thread stacks smaller to reduce overall memory usage: <code>-XX:ThreadStackSize=96 -Xss96k</code></li>
+<li>Severely limit the size of the heap to avoid hitting OS swap: <code>-Xmx46m -Xms46m</code></li>
+</ul>
+<p>It took lots of trial and error to determine these numbers. <a href = "http://java.sun.com/j2se/1.5.0/docs/guide/vm/gc-ergonomics.html">Java 5 GC Ergonomics</a> advertises that it should help eliminate the need to do all this tuning, so I thought I'd give it a try.</p>
+<p>It seems that you need to be using the Throughput collector (<code>-XX:+UseParallelGC</code>) to get adaptive sizing automatically enabled.  I then removed my manual heap sizing options completely, and set the ergonomic options: <code>-XX:MaxGCPauseMillis=100 -XX:MaxGCMinorPauseMillis=100 -XX:GCTimeRatio=9</code>.  I chose a "high" GCTimeRatio (lesser than the 19 from other examples), since I knew that <em>footprint</em> is probably the biggest issue for my server.  I figured if I made it easy to hit the GCTimeRatio and the maximum pauses, it could shrink the heap even smaller.  I'm testing this all right now -- it seems to take a long time for performance to settle into its worst states (12-24 hours).  Repeatedly spidering and touching all the apps (while also spawning lots of sessions) just doesn't seem to kick off the problems like I'd expect.  It may ultimately be caused by other heavy nightly jobs that run on the box, so I just have to wait.</p>
+<p>After 4 hours of testing the latest configuration, the server's settled into using only about 41M or heap space, of which only 640K is set aside for the young generation.  I'm hoping that the JVM is able to recognize when GC times go long due to the OS swappig out heap and is automatically keeping it below that threshold.  We'll see how it does in the longer term.</p>
+<p><strong>Update (30 August 2006):</strong>
+The server's been up for a week straight.  I've  redeployed a WebWork application a couple times, so the memory usage creeped up a bit, but it's now sitting around 46M.  I get occassional long GCs (~10 seconds), but they're not common.</p>
+<p>I looked up the proxy error I see in Apache occassionally, and it may be an issue with keepalive connections between Apache and JBoss.  I'll have to read more about that and see if any of the tips alleviate it.  I had always assumed this was caused the JBoss server going away.</p>
+<p>I must say that I've been pleased with its behavior so far, and my java command line is shorter than it was -- that's always a good thing.</p>

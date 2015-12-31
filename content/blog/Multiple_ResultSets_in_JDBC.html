@@ -1,0 +1,24 @@
+title=Multiple ResultSets in JDBC
+date=2003-09-09 17:57:31.73
+type=post
+status=published
+tags=
+~~~~~~
+<p>I've never had the occasion to even expect to have more than one ResultSet returned by one execution of a Statement, but that's exactly what I got to do today.  It seems that any query <code>execute()</code>ed from a sybase stored proc drops a ResultSet, so I need to iterate through them to get <u>all</u> the results, not just rows in a single ResultSet. </p>
+<p>Here's a bit of example code to demonstrate navigating through the multiple ResultSets:</p>
+<pre>
+    CallableStatment cstmt =
+        conn.prepareQuery("{ call my_proc() }");
+    cstmt.execute();
+    ResultSet rs = null;
+    do {
+        // don't process update counts, only resultsets
+        if ((rs = cstmt.getResultSet()) != null) {
+            while (rs.next()) {
+                System.out.println(rs.getString("field"));
+            }
+        }
+    } while (cstmt.getMoreResults()  // advance current rs
+        || cstmt.getUpdateCount() != -1); // case of update count
+</pre>
+<p>For any more info, check your local javadocs.</p>

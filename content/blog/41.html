@@ -1,0 +1,10 @@
+title=Hierarchal Classloading and the Singleton
+date=2003-10-08 16:09:51.2
+type=post
+status=published
+tags=
+~~~~~~
+<p>Visibility of a class, in particular a <a href = "http://www.onjava.com/pub/a/onjava/2003/08/27/singleton.html">Singleton</a> class is determined by the classloader that finds and loads it, not necessarily the classloader that calls for its instantiation.  When a class is requested, the inner classloader tries to find it.  If it can't, it passes the request up to the parent classloader, and so on until someone finds it.</p>
+
+<p>In the case of Sybase EAServer, a singleton class that is located in the server-wide static class repository (<code>${EAServer}/java/classes</code>) is available to both the web and EJB containers, no matter which side actually instantiates it.  Say a singleton bean to maintain a cache is instantiated by the web container in the <code>init()</code> method of a servlet, that same instance of the object is available to the EJB tier as well.  If the EJB tier has it's own definition of that singleton (in an EJB's <code>WEB-INF/classes</code> directory), the EJB's classloader will load that one instead of allowing the EJB to see the common server-wide one.</p>
+<p>I learned some of this lesson back when I first started packaging J2EE applications.  Classes defined in the EJB jar are not available to the components in the web-tier war file, since they are loaded by different sibling classloaders.  The (annoying, but now automated) solution was to copy the value objects, home interfaces, and remote interfaces into the war file.  Another solution would have been to copy the shared classes into the servers common classpath.  This usually negates the ability to hot-deploy, so I would have been restarting my application server repeatedly.  This obviously would be intolerable.</p>

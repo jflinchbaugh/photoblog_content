@@ -1,0 +1,12 @@
+title=Replacement HD
+date=2004-09-16 09:10:50.442
+type=post
+status=published
+tags=ThinkPad R40
+~~~~~~
+<p>I have the replacement drive installed into my R40 now.  I backed up everything with tar to my NFS share where I keep the rest of my backups, and now I'm watching the IBM Recovery disks slowly waste my disk space with Windows XP.  The first pass had put the (somewhat useful) pre-desktop area in place, but before I could really intervene, it was asking for the other 3 restoration CDs, so I guess I'm getting windows on here.  I'm curious if I could allocate a small (5G) partition where Windows <i>could</i> go if needed, but I'd otherwise mount a more useful filesystem there.  Then I could clear it only if I need it.</p>
+
+<p>I'm pretty sure I've done something less than efficient already (maybe copied the CD contents to a recovery area, but then ended up installing the C: drive off the CDs anyway).  This thing is going to kill me -- I've been watching this restore and swapping discs for over 2 hours!  I haven't even gotten to restoring my Linux system.  I need sleep, but I also need this machine working.</p>
+<p><strong>Update (16 September 2004):</strong>
+I did get it mostly done on Monday night.  I was up until 5AM watching my backed up Linux partitions untar.  NFS just got stuck trying to mount from Knoppix, so I ended up using <code>scp</code> to copy my tar.bz2 files to my drive.</p>
+<p>QParted and <code>ntfsresize</code> both reported that the smallest size to which I could shrink my newly installed WinXP partition was 18G, instead of the 5G I was expecting.  I had turned off windows swap and defragmented the drive, but I guess it wasn't good enough.  I gave up on resizing the partition and just wiped it off the drive again (after watching it be setup for 2 hours), and recreated it as the 5G I had on the old drive.  I still haven't bothered actually going to the trouble to restore Windows.  I have space if the need arises though.</p>

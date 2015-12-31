@@ -1,0 +1,26 @@
+title=Applying JSTL to the Blog Code
+date=2004-03-03 12:32:21.074
+type=post
+status=published
+tags=Java, Blog Code
+~~~~~~
+<p><a href = "http://java.sun.com/products/jsp/jstl/">JSP Standard Taglibs</a> have definitely learned a bit from previous efforts like <a href = "http://jakarta.apache.org/struts/">Struts</a> taglibs.  Everything is built upon an expression language which makes accessing fields and objects much easier from within JSP.  I've been able to trim quite a few bytes from my JSP using this more terse taglib set.  Additionally, these tags can be applied in other web apps without using Struts.</p>
+<p>Since my JBoss instance has Tomcat 4.x integrated instead of 5.x, I'm using <a href = "http://jakarta.apache.org/taglibs/doc/standard-1.0-doc/intro.html">Jakarta Standard Taglibs 1.0</a>.</p>
+<p>Here are some examples of the changes:
+<font size = "-2">
+<table border = "1">
+<tbody>
+<tr><th>Struts</th><th>JSTL</th></tr>
+<tr>
+<td><code>&lt;bean:write name = "address" property = "state"/&gt;</code></td>
+<td><code>&lt;c:out value = ${address.state}"/&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;logic:notEmpty  name = "pref" property = "paged"&gt;</code></td>
+<td><code>&lt;c:if test = "${pref.paged != null}"&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</font>
+</p>
+<p><b>Update (3 March 2004):</b> Yay, I'm done and I've deployed it.  It shouldn't look much different except for the last comment time which is new.</p>
