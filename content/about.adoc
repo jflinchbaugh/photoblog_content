@@ -1,8 +1,0 @@
-title=About
-date=2015-12-30
-type=page
-status=published
-~~~~~~
-= About
-
-I'm a software engineer and a photographer.
