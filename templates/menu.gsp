@@ -8,7 +8,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <div class="navbar-brand">John Flinchbaugh</div>
+          <a class="navbar-brand" 
+                href = "${content.rootpath?:''}index.html">
+            John Flinchbaugh
+          </a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
