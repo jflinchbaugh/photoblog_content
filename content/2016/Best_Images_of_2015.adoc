@@ -1,7 +1,7 @@
 title=Best Images of 2015
 date=2016-01-16
 type=post
-status=draft
+status=published
 tags=Photography, 2015
 ~~~~~~
 I've taken a few hard moments
@@ -12,7 +12,7 @@ and I pared it down from there
 over a couple hours.
 
 == The Orb at Ardmore
-image::{docdir}images/2015/orb.jpg[]
+image::{site_host}images/2015/orb.jpg[]
 The Orb, 
 the legendary ambient musicians, 
 put on an amazing show
@@ -30,7 +30,7 @@ and ready to go, since I had freely shot
 the opening act.
 
 == DJ Uranko at Tellus 360
-image::../assets/images/2015/uranko.jpg[]
+image::{site_host}images/2015/uranko.jpg[]
 I was out to Tellus to see friends
 and they had a guest DJ,
 so I had some fun shooting as always.
@@ -42,12 +42,12 @@ to fill some space in the image.
 They really should project the crowd up there.
 
 == The Roar
-image::../assets/images/2015/roar.jpg[]
+image::{site_host}images/2015/roar.jpg[]
 My friends at Shadowland keep the dance floor intense,
 and they always seem to appreciate seeing photos from the nights.
 
 == Playing with Fire in God's Basement
-image::../assets/images/2015/fire.jpg[]
+image::{site_host}images/2015/fire.jpg[]
 This year, I got brave and started ventured out 
 again to longer nights, like Big Dub out in the woods
 and God's Basement Reunion outside Philadelphia.
@@ -55,7 +55,7 @@ It was the first party in a newly reclaimed warehouse
 now called _The Arts Garage: Waterfront_.
 
 == Neon Kaleidscope
-image::../assets/images/2015/nk5.jpg[]
+image::{site_host}images/2015/nk5.jpg[]
 The Neon Kaleidoscope (previously Pure) crew 
 celebrated 5 years in 2015.
 I had just seen an exhibition
@@ -65,18 +65,18 @@ stitching to make a wide image to capture
 everyone at one of Neon Kaleidoscope's biggest nights.
 
 == DJ Diesel
-image::../assets/images/2015/diesel.jpg[]
+image::{site_host}images/2015/diesel.jpg[]
 Jay and I have been splashing light
 around the Lizard Lounge for quite some time now.
 
 == Knobs and Switches
-image::../assets/images/2015/knobs.jpg[]
+image::{site_host}images/2015/knobs.jpg[]
 I've started working to photograph
 the gear and other environmental stuff
 from raves. I love the gesture in this image.
 
 == Nell at Lizard Lounge
-image::../assets/images/2015/nell.jpg[]
+image::{site_host}images/2015/nell.jpg[]
 I shot many of my favorite images
 at Lizard Lounge this year.
 This image resulted from a quick
@@ -87,14 +87,14 @@ really carrying more gear
 into clubs.
 
 == Inside and Out
-image::../assets/images/2015/duplicity.jpg[]
+image::{site_host}images/2015/duplicity.jpg[]
 I had the great opportunity to shoot with Marsha Denill
 in the same house with Brooke Shaden!
 The inspiration was strong this day,
 since I knew others would be making amazing images.
 
 == Fiesta
-image::../assets/images/2015/fiesta.jpg[]
+image::{site_host}images/2015/fiesta.jpg[]
 I love photographing toys,
 and my bright green Ford Fiesta 
 is my favorite car I've had, 
