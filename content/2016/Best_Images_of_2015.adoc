@@ -11,6 +11,24 @@ My first pass yielded 101 images,
 and I pared it down from there
 over a couple hours.
 
+_Ten_ is a hard number when looking 
+at a year of images.
+It leaves me with the feeling
+that I left out some aspects 
+of my photography,
+but that's part of the exercise --
+Which aspects are excelling?
+I exposed a sensor over 50k times,
+shared over 1800 shots on Facebook,
+and showed nearly 250 on Flickr. 
+footnote:[Counting images for the year was fun: 
+a shell script to rip through exif data 
+for 2 cameras to find the image numbers 
+for each raw image, 
+rough counting of pages on Facebook, 
+and clicking "Select All" on every day 
+of images in 2015 on Flickr's Camera Roll.]
+
 == The Orb at Ardmore
 image::{site_host}images/2015/orb.jpg[]
 The Orb, 
