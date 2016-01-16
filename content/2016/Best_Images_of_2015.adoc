@@ -12,7 +12,7 @@ and I pared it down from there
 over a couple hours.
 
 == The Orb at Ardmore
-image::{site_host}images/2015/orb.jpg[]
+image::{content_rootpath}images/2015/orb.jpg[]
 The Orb, 
 the legendary ambient musicians, 
 put on an amazing show
@@ -30,7 +30,7 @@ and ready to go, since I had freely shot
 the opening act.
 
 == DJ Uranko at Tellus 360
-image::{site_host}images/2015/uranko.jpg[]
+image::{content_rootpath}images/2015/uranko.jpg[]
 I was out to Tellus to see friends
 and they had a guest DJ,
 so I had some fun shooting as always.
@@ -48,8 +48,9 @@ and they always seem to appreciate seeing photos from the nights.
 
 == Playing with Fire in God's Basement
 image::{site_host}images/2015/fire.jpg[]
-This year, I got brave and started ventured out 
-again to longer nights, like Big Dub out in the woods
+This year, I got brave and ventured out again 
+to longer nights, 
+like Big Dub out in the woods
 and God's Basement Reunion outside Philadelphia.
 It was the first party in a newly reclaimed warehouse
 now called _The Arts Garage: Waterfront_.
@@ -87,14 +88,14 @@ really carrying more gear
 into clubs.
 
 == Inside and Out
-image::{site_host}images/2015/duplicity.jpg[]
+image::{content_rootpath}images/2015/duplicity.jpg[]
 I had the great opportunity to shoot with Marsha Denill
 in the same house with Brooke Shaden!
 The inspiration was strong this day,
 since I knew others would be making amazing images.
 
 == Fiesta
-image::{site_host}images/2015/fiesta.jpg[]
+image::{content_rootpath}images/2015/fiesta.jpg[]
 I love photographing toys,
 and my bright green Ford Fiesta 
 is my favorite car I've had, 
