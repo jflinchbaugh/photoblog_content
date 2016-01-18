@@ -1,0 +1,25 @@
+title=Best Images of 2014
+date=2016-01-18
+type=post
+status=draft
+tags=Photography, 2014
+~~~~~~
+
+For comparison, 
+I went back to pick my best images
+from 2014 over the past couple days.
+This was slightly harder than 
+the exercise for 2015 for some reason.
+
+
+image::{site_host}images/2014/aikido.jpg[]
+image::{site_host}images/2014/aleesha.jpg[]
+image::{site_host}images/2014/bench.jpg[]
+image::{site_host}images/2014/briana_multiply.jpg[]
+image::{site_host}images/2014/cold.jpg[]
+image::{site_host}images/2014/cosmic.jpg[]
+image::{site_host}images/2014/elsewhere.jpg[]
+image::{site_host}images/2014/fire.jpg[]
+image::{site_host}images/2014/funkbot.jpg[]
+image::{site_host}images/2014/joy.jpg[]
+image::{site_host}images/2015/fiesta.jpg[]
