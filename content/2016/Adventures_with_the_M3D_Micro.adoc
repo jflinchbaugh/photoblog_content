@@ -1,0 +1,18 @@
+title=Adventures with the M3D Micro
+date=2016-01-20
+type=post
+status=draft
+tags=Tech, 3D Printing, M3D
+~~~~~~
+The kids got a little
+https://printm3d.com/themicro/[M3D Micro]
+for Christmas,
+and so started our adventures into 3D printing.
+
+I intended to let the kids
+learn the whole thing from scratch,
+but I knew I was throwing them
+a little bit of a curve ball
+by only having Linux netbooks
+to drive it,
+so I ended up getting a headstart
