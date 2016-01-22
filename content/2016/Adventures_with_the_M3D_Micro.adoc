@@ -16,3 +16,53 @@ a little bit of a curve ball
 by only having Linux netbooks
 to drive it,
 so I ended up getting a headstart
+setting up
+http://octoprint.org/[OctoPrint]
+and the
+https://github.com/donovan6000/M3D-Fio[M3D-Fio] driver.
+
+At the end of December 2015
+when I was starting,
+the M3D-Fio driver
+had some configurations
+in the repository
+that might not have been optimal,
+so I was fighting a bit
+with a few problems:
+
+* adhesion to the bed
+* gaps and lines in the bottom layers
+* stringing
+* speed
+* other quality issues
+
+I thrashed around for quite some time
+changing settings I didn't really understand
+and Matthew spent a night helping me
+and showing me what his much larger printer
+could do -- that helped immensely,
+since it gave me some hints
+as to what I should be expecting from my printer.
+I also learned what the different settings
+should be doing for me.
+
+For an entire Sunday,
+about 18 hours,
+I printed 1cm test cubes
+and experimented with settings.
+I quickly decided
+I should have my settings and profiles
+tracked in my own local git repository
+so I can always rollback
+to previous settings.
+
+After a week or so,
+some updates
+from the M3D-Fio repository
+brought us more success
+with more default settings
+that matched the defaults
+found in the original software
+from Micro.
+The conservative settings also added rafts
+and slowed down the print a bit.
