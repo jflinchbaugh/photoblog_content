@@ -100,6 +100,7 @@ Other mistakes and problems I've observed:
 * Setting a backlash speed in the M3D preferences 
   caused the head to pause at the end of every infill line
   and in the middle of drawing circle shells.  
-  While paused, the plastic would still oose and pile up
-  terribly.
+  While paused, the plastic would still oose and pile up too thick.
+  As Matthew pointed out, any pause in head movement 
+  will likely cause imperfections, and this really demonstrated that.
   
