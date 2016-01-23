@@ -66,3 +66,40 @@ found in the original software
 from Micro.
 The conservative settings also added rafts
 and slowed down the print a bit.
+
+Now I only needed 
+to copy the default PLA 0.25mm slicing profile 
+and make a few changes:
+
+* bump wall thickness from 0.35 to 0.70 (multiples of 0.35, since
+  that's the nozzle thickness
+* switch the platform adhesion to "none" instead of "raft"
+* enable a 150mm skirt to ensure the plastic is flowing
+
+I ultimately found 
+that I needed to compensate 
+the bed height by -0.4mm
+to get more of a "squish" on the first layer
+to get it to stick to the bed adequately.
+With that offset, 
+the automatic calibration 
+seemed to do its job better 
+and keep the prints starting out alright.
+
+Other mistakes and problems I've observed:
+
+* Sometimes the Z axis (distance from bed)
+  got reversed and the printer would drag the head harder
+  on the bed instead of working its way away from the bed
+  to make room for the print.  I'm not sure what caused it.
+* A y-backlash of -0.50mm helped close a little gap 
+  between the infill and the circular shell 
+  when printing a cylinder.  
+  That can be calibrated 
+  with the M3D's backlash calibration test in OctoPrint.
+* Setting a backlash speed in the M3D preferences 
+  caused the head to pause at the end of every infill line
+  and in the middle of drawing circle shells.  
+  While paused, the plastic would still oose and pile up
+  terribly.
+  
