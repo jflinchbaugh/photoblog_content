@@ -18,6 +18,23 @@
             <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>index.html">Home</a></li>
             <li><a href="${content.rootpath ?: ''}${config.archive_file}">Archive</a></li>
             <li class = "dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Resume <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                    <a href="http://www.hjsoft.com/~john/resume.txt">
+                        TXT
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.hjsoft.com/~john/resume.pdf">
+                        PDF
+                    </a>
+                </li>
+              </ul>
+            </li>
+            <li class = "dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <% alltags.each { t -> %>
