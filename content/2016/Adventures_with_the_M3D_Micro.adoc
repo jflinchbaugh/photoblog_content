@@ -1,8 +1,8 @@
 title=Adventures with the M3D Micro
-date=2016-01-20
+date=2016-02-12
 type=post
-status=draft
-tags=Tech, 3D Printing, M3D
+status=published
+tags=Tech, 3D Printing, M3D, Linux, Octoprint
 ~~~~~~
 The kids got a little
 https://printm3d.com/themicro/[M3D Micro]
@@ -52,7 +52,7 @@ I printed 1cm test cubes
 and experimented with settings.
 I quickly decided
 I should have my settings and profiles
-tracked in my own local git repository
+tracked in my own local git repository,
 so I can always rollback
 to previous settings.
 
@@ -67,40 +67,38 @@ from Micro.
 The conservative settings also added rafts
 and slowed down the print a bit.
 
-Now I only needed 
-to copy the default PLA 0.25mm slicing profile 
-and make a few changes:
+I was able to take those conservative settings
+and speed them up a bit and remove the rafts --
+the BuildTak holds a print pretty well
+even without the raft.
+I based my customizations on the stock profile
+that prints at 0.25mm layer thickness
+to get even more speed
+out of the printer.
 
-* bump wall thickness from 0.35 to 0.70 (multiples of 0.35, since
-  that's the nozzle thickness
-* switch the platform adhesion to "none" instead of "raft"
-* enable a 150mm skirt to ensure the plastic is flowing
+I also found keeping a -0.4mm
+bed offset on my printer helped get
+just enough squish in the first layer
+to help get a more solid bottom layre
+and good adhesion to the bed.
 
-I ultimately found 
-that I needed to compensate 
-the bed height by -0.4mm
-to get more of a "squish" on the first layer
-to get it to stick to the bed adequately.
-With that offset, 
-the automatic calibration 
-seemed to do its job better 
-and keep the prints starting out alright.
+I'm at the point now
+that I have pretty reasonable expectations
+for what the printer can do,
+and I can start up the machine
+after a week or 2 of sitting,
+and run a print through reliably
+without needing to make adjustments.
+That's great for letting the kids
+just make whatever they want.
+Both kids have been able to get
+into Tinkercad and produce some printable designs.
+Ben's doing Nerf rail accessories,
+and Marie is designing a new cap
+for my growler.
 
-Other mistakes and problems I've observed:
-
-* Sometimes the Z axis (distance from bed)
-  got reversed and the printer would drag the head harder
-  on the bed instead of working its way away from the bed
-  to make room for the print.  I'm not sure what caused it.
-* A y-backlash of -0.50mm helped close a little gap 
-  between the infill and the circular shell 
-  when printing a cylinder.  
-  That can be calibrated 
-  with the M3D's backlash calibration test in OctoPrint.
-* Setting a backlash speed in the M3D preferences 
-  caused the head to pause at the end of every infill line
-  and in the middle of drawing circle shells.  
-  While paused, the plastic would still oose and pile up too thick.
-  As Matthew pointed out, any pause in head movement 
-  will likely cause imperfections, and this really demonstrated that.
-  
+Finally, I've pushed my configurations
+to a
+https://github.com/jflinchbaugh/m3d_config.git[public git repository]
+to serve as reference
+for anyone else who cares.
