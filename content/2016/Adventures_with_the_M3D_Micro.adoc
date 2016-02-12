@@ -37,7 +37,7 @@ with a few problems:
 * other quality issues
 
 I thrashed around for quite some time
-changing settings I didn't really understand
+changing settings I didn't really understand,
 and Matthew spent a night helping me
 and showing me what his much larger printer
 could do -- that helped immensely,
