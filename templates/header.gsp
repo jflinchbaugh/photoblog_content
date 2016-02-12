@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>${content.title ?: 'John Flinchbaugh'}</title>
+    <title>
+        John Flinchbaugh
+        <% if (content.title) { %>: ${content.title}<% } %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
