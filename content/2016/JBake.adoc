@@ -23,7 +23,8 @@ scheduled to run on the server which basically does:
 
 ----
 cd techblog
-git pull | grep "Already" > /dev/null || jbake
+git fetch
+git merge | grep "Already" > /dev/null || jbake
 ----
 
 That little bit of code
