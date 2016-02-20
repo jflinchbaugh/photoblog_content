@@ -82,6 +82,18 @@ just enough squish in the first layer
 to help get a more solid bottom layre
 and good adhesion to the bed.
 
+Another notable configuration tip I had picked up was
+to set the wall thickness to a multiple
+of the nozzle size.  
+In the case of the M3D,
+the nozzle thickness is 0.35mm,
+so I'm using a thickness of 0.70mm.
+Before I had learned that, 
+a couple 
+of my initial http://www.thingiverse.com/thing:1172630[chachkies]
+came out with thin gaps where the slicer should
+have decided to fill.
+
 I'm at the point now
 that I have pretty reasonable expectations
 for what the printer can do,
