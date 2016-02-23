@@ -84,12 +84,12 @@ and good adhesion to the bed.
 
 Another notable configuration tip I had picked up was
 to set the wall thickness to a multiple
-of the nozzle size.  
+of the nozzle size.
 In the case of the M3D,
 the nozzle thickness is 0.35mm,
 so I'm using a thickness of 0.70mm.
-Before I had learned that, 
-a couple 
+Before I had learned that,
+a couple
 of my initial http://www.thingiverse.com/thing:1172630[chachkies]
 came out with thin gaps where the slicer should
 have decided to fill.
@@ -114,3 +114,19 @@ to a
 https://github.com/jflinchbaugh/m3d_config.git[public git repository]
 to serve as reference
 for anyone else who cares.
+
+=== Update 2016-02-23
+
+An https://github.com/donovan6000/M3D-Fio/commit/eb179b81abb4498d32bca3573396f25caac1e330[update]
+added a slicker settings dialog
+to allow more intuitive adjustments
+to a profile,
+so I've been testing relatively successfully
+with using the stock PLA profile
+and just flipping options.
+I did find that using a raft
+in "medium quality" mode fused
+my little 10mm test cube to the raft
+in a way that I can't remove it.
+I usually avoid the raft anyway, though,
+since it sticks so well to the buildtak already.
