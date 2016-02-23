@@ -37,7 +37,7 @@
             <li class = "dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <% alltags.each { t -> %>
+                <% (alltags as List).sort().each { t -> %>
                     <li><a href="${(content.rootpath ?: '')}tags/${t}.html">${t}</a></li>
                 <% } %>
               </ul>
