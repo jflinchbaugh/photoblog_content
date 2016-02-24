@@ -1,4 +1,4 @@
-title=LIFO_Life
+title=LIFO Life
 date=2016-02-24
 type=post
 status=published
