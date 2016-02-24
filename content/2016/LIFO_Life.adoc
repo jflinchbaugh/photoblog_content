@@ -1,0 +1,55 @@
+title=LIFO_Life
+date=2016-02-24
+type=post
+status=published
+tags=Photography, Podcasts
+~~~~~~
+.Information Overload
+I've heard lots of talk recently about
+http://www.wnyc.org/story/case-infomagical/[information overload].
+I even tried to do that whole Infomagical Challenge,
+and I couldn't really convince myself it was necessary.
+I just don't seem to have that addiction trait.
+
+.Social
+Our social feeds are in reverse chronological order -- 
+dip in, see the latest, scroll a little to see something older,
+and then move on. 
+Sure I'll hit reload a couple times 
+when I'm bored to see something new,
+(but I could totally stop whenever I want).o
+
+.Photo Workflow
+The reverse-chronological (or LIFO, last-in-first-out) order
+works great for my photo workflow too.
+When I was working chronologically, 
+*every* photo ended up late -- up to a month or 2 at times.
+Working from the newest stuff back fixed that.
+The latest party or event could often
+get posted, while some lower-priority sets of photos
+could wait a little.  When I got super-busy, 
+*some* photos could end up a month or 2 delayed, 
+but not *all* of them.
+
+.Culling in Reverse
+LIFO even saves me time when I'm culling photos,
+which is the *first* thing I do after importing photos.
+We often work a scene and shoot until we're convinced
+that we have the shot we want,
+so I start looking for the keepers from the *end*
+of the set and browse my way back 
+to the *beginning* of the set.
+When I know I have the keeper,
+I can more confidently skip all the previous images
+that led me to the keeper.
+There was no point in studying
+those earlier half-baked images
+when I'll keep finding better versions
+as I work forward.
+
+.Delete Most the Photos
+Once I've picked that 10% I'm keeping, 
+I delete everything else, 
+because I still have the end in mind 
+-- reasonably backing up all my images.
+Some probably find that idea backward too.
