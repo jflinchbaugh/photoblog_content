@@ -17,7 +17,9 @@ dip in, see the latest, scroll a little to see something older,
 and then move on. 
 Sure I'll hit reload a couple times 
 when I'm bored to see something new,
-(but I could totally stop whenever I want).o
+(but I could totally stop whenever I want).
+I don't feel like I need to necessarily click the bait
+or read everything.
 
 .Photo Workflow
 The reverse-chronological (or LIFO, last-in-first-out) order
