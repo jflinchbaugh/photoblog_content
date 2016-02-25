@@ -115,7 +115,7 @@ https://github.com/jflinchbaugh/m3d_config.git[public git repository]
 to serve as reference
 for anyone else who cares.
 
-=== Update 2016-02-23
+.Update 2016-02-23
 
 An https://github.com/donovan6000/M3D-Fio/commit/eb179b81abb4498d32bca3573396f25caac1e330[update]
 added a slicker settings dialog
