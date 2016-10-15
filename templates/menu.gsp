@@ -45,7 +45,7 @@
                     def tags = (alltags as List).sort()
                     tags.take(tags.size() / 2 + 1 as Integer).each { t ->
                 %>
-                                <li><a href="${(content.rootpath ?: '')}tags/${t}.html">${t}</a></li>
+                                <li><a href="${(content.rootpath ?: '')}tags/${t.replace(' ', '-')}.html">${t}</a></li>
                 <%
                     }
                 %>
@@ -56,7 +56,7 @@
                 <%
                     tags.drop(tags.size() / 2 + 1 as Integer).each { t ->
                 %>
-                                <li><a href="${(content.rootpath ?: '')}tags/${t}.html">${t}</a></li>
+                                <li><a href="${(content.rootpath ?: '')}tags/${t.replace(' ', '-')}.html">${t}</a></li>
                 <%
                     }
                 %>
