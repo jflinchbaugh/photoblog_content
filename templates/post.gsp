@@ -11,7 +11,7 @@
 	<hr style = "clear: both"/>
     <p>Filed Under: <em>
         <% content.tags.each { t -> %>
-            <a href = "${content.rootpath}tags/${t}.html">${t}</a>
+            <a href = "${content.rootpath}tags/${t.replace(' ', '-')}.html">${t}</a>
         <% } %>
     </em></p>
 
