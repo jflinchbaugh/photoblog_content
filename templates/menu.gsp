@@ -37,9 +37,33 @@
             <li class = "dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <% (alltags as List).sort().each { t -> %>
-                    <li><a href="${(content.rootpath ?: '')}tags/${t}.html">${t}</a></li>
-                <% } %>
+                <li>
+                    <div class = "row" style = "width: 20em">
+                        <div class = "col-xs-6">
+                            <ul class = "list-unstyled">
+                <%
+                    def tags = (alltags as List).sort()
+                    tags.take(tags.size() / 2 + 1 as Integer).each { t ->
+                %>
+                                <li><a href="${(content.rootpath ?: '')}tags/${t}.html">${t}</a></li>
+                <%
+                    }
+                %>
+                            </ul>
+                        </div>
+                        <div class = "col-xs-6">
+                            <ul class = "list-unstyled">
+                <%
+                    tags.drop(tags.size() / 2 + 1 as Integer).each { t ->
+                %>
+                                <li><a href="${(content.rootpath ?: '')}tags/${t}.html">${t}</a></li>
+                <%
+                    }
+                %>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
               </ul>
             </li>
         </ul>
