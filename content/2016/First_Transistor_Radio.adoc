@@ -2,7 +2,7 @@ title=First Transistor Radio
 date=2016-10-18
 type=post
 status=published
-tags=History
+tags=History,Technology
 ~~~~~~
 The
 http://www.pbs.org/transistor/background1/events/tradio.html[First Transistor Radio]

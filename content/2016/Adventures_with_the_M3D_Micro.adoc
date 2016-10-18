@@ -2,7 +2,7 @@ title=Adventures with the M3D Micro
 date=2016-02-12
 type=post
 status=published
-tags=Tech, 3D Printing, M3D, Linux, Octoprint
+tags=Technology, 3D Printing, M3D, Linux, Octoprint
 ~~~~~~
 The kids got a little
 https://printm3d.com/themicro/[M3D Micro]
