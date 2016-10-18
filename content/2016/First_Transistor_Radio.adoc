@@ -12,7 +12,6 @@ hit the market on this day (18 October) in 1954.
 Learning this today reminded me
 of one of my first pieces
 of electronics as a kid.
-
 It was a little blue, portable _transistor_ AM radio
 that took 2 AA batteries.
 I got it as a prize
@@ -31,7 +30,6 @@ I was intrigued by it --
 solder joints, variable capacitor, capacitors, resistors,
 transistors, antenna coil with ferrous core,
 bits of glue holding it together, etc.
-
 That thing came apart many times as I compared
 its contents to other devices and to those
 on my electronics kit later.
