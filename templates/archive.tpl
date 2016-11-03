@@ -2,10 +2,9 @@ layout(
     'layout/main.tpl',
     true,
     alltags: alltags,
+    pageTitle: 'Archive',
     bodyContents: contents {
-        div(class: 'page-header') {
-            h1('Blog Archive')
-        }
+        h1('Blog Archive')
         published_posts.collect().groupBy {
             it.date.format('MMMM yyyy')
         }.each { month, posts ->

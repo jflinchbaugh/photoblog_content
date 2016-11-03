@@ -1,6 +1,7 @@
 layout(
     'layout/main.tpl',
     true,
+    pageTitle: 'Blog',
     alltags: alltags,
     bodyContents: contents {
         published_posts.take(20).each { post ->

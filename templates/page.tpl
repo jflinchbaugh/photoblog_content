@@ -1,6 +1,7 @@
 layout(
     'layout/main.tpl',
     true,
+    pageTitle: content.title,
     alltags: alltags,
     bodyContents: contents {
         div(class: 'page-header') {
