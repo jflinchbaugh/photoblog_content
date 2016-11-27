@@ -10,6 +10,8 @@ http://www.anandtech.com/show/9118/lg-34um67-ultrawide-freesync-review[LG 34UM67
 display
 to use on my Debian Linux workstation
 that I use for processing photos.
+It's an IPS display with 2560x1080 pixels,
+so that should fit nicely with photo work.
 
 The built-in graphics on my Dell T20 only supports VGA,
 so I also needed to buy a new video card to support HDMI.
