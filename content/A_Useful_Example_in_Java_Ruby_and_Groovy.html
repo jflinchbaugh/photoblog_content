@@ -4,7 +4,7 @@ type=post
 status=published
 tags=Technology, Java, Computers, Work
 ~~~~~~
-<p>We've been using Java and Ruby for work, and we've recently been asked to look more toward Groovy where we were using Groovy, so I rewrote a useful little iconv script which we use to re-encode large volumes of data (which the GNU iconv doesn't seem to want to handle).</p>
+<p>We've been using Java and Ruby for work, and we've recently been asked to look more toward Groovy where we had been using Ruby, so I rewrote a useful little iconv script which we use to re-encode large volumes of data (which the GNU iconv doesn't seem to want to handle).</p>
 <p>For illustration, here are the implementations I wrote:</p>
 <p>Java (40 lines):</p>
 <blockquote>
@@ -17,15 +17,15 @@ public class Iconv {
                     "Usage: Iconv &lt;in&gt;:&lt;encoding&gt; &lt;out&gt;:&lt;encoding&gt;");
             return;
         }
-        
+
         final String[] ins = args[0].split(":");
         final String[] outs = args[1].split(":");
-        
+
         final String inFile = ins[0];
         final String inEnc = ins[1];
         final String outFile = outs[0];
         final String outEnc = outs[1];
-        
+
         Writer writer = null;
         try {
             writer = new OutputStreamWriter(
