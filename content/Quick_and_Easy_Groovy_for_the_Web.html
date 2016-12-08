@@ -4,8 +4,8 @@ type=post
 status=published
 tags=Work, Java, Computers
 ~~~~~~
-<p><a href = "http://groovy.codehaus.org/">Groovy</a> can be used pretty easily to spin up some simple web pages in almost the same way one would hack out some PHP or JSP without going to the trouble to do an all-out <a href = "http://grails.org/">Grails</a> project.</p>
-<p>The <a href = "http://groovy.codehaus.org/Groovlets">Groovy Servlet</a> allows you to pack up the <code>groovy-all-*.jar</code>, a simple <code>web.xml</code>, and whatever <code>*.groovy</code> scripts you want and deploy it right into Tomcat as a plain WAR file.  The Groovy Servlet page </p>
+<p><a href = "http://groovy-lang.org/">Groovy</a> can be used pretty easily to spin up some simple web pages in almost the same way one would hack out some PHP or JSP without going to the trouble to do an all-out <a href = "http://grails.org/">Grails</a> project.</p>
+<p>The <a href = "http://groovy-lang.org/servlet.html">Groovy Servlet</a> allows you to pack up the <code>groovy-all-*.jar</code>, a simple <code>web.xml</code>, and whatever <code>*.groovy</code> scripts you want and deploy it right into Tomcat as a plain WAR file.  The Groovy Servlet page </p>
 <p>Here's a bit of a script I put together to jump start a simple Groovlet project by packaging a WAR file from a directory of scripts.  This isn't Groovy Servlet code itself, but just a command-line tool.  (The Groovy Servlet page linked previously has examples for writing your own servlets.) This script will copy in the Groovy JAR and generate the basic <code>web.xml</code> to wire up the <code>GroovyServlet</code> to dynamically execute your scripts.  I also have a downloadable copy of <a href = "http://www.hjsoft.com/~john/package_groovlet.groovy">package_groovlet.groovy</a>.</p>
 <blockquote>
 <pre>#!/usr/bin/env groovy
