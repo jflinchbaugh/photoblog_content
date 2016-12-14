@@ -15,7 +15,7 @@ layout(
                 ).format(post.date)
             )
             p(post.body)
-            hr()
+            hr(class: 'clear-fix', '')
         }
         p {
             yield 'Older posts are available in the '

@@ -50,3 +50,7 @@ body {
 code {
   font-size: 80%;
 }
+
+.clear-fix {
+    clear: both;
+}

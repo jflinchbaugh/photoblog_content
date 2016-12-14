@@ -13,7 +13,7 @@ layout(
         p {
             yieldUnescaped content.body
         }
-        hr(style: 'clear: both', '')
+        hr(class: 'clear-fix', '')
         p {
             em(content.date.format('dd MMMM yyyy'))
         }
