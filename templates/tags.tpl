@@ -19,7 +19,7 @@ layout(
                 ).format(post.date)
             )
             p(post.body)
-            hr()
+            hr(class: 'clear-fix', '')
         }
         a(name: 'all', '')
         h2('All the Posts')
