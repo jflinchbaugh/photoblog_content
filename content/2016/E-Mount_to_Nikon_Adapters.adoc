@@ -1,0 +1,104 @@
+title=E-Mount to Nikon Adapter
+date=2016-12-31
+type=post
+status=published
+tags=Photography,Sony,Nikon
+~~~~~~
+
+.Switch to Sony
+When I bought my first Sony a6000 body
+in September 2014,
+I needed an adapter
+to get started
+and to mount my Nikon AI-S and G lenses
+on the new camera body,
+since I had no intention to buy new lenses.
+I knew to use one of these manual adapters
+I'd need to turn the lens open,
+focus,
+and then stop back down to shoot.
+
+.Metabones Adapter
+The adapter was an important part of kit
+that was going to make the whole switch possible,
+so I had settled on spending the extra money
+and getting the
+http://amzn.to/2itzBMp[Metabones Adapter].
+
+* Cost about $140 at the time.
+* Physically sets the aperture on my Nikon G lenses.
+* Long-throwing aperture ring for fine control,
+  about 50 degrees
+  from wide-open to fully stopped down.
+* Marked for 8 stops (F to 7).
+* Moves smoothly with no clicking at individual stops.
+  This is apparently a feature for shooting video.
+* Convenient tripod mount
+  which is nice for balance and larger tripod plates.
+* Made completely of metal.
+* Solid connection to camera and lens.
+* Only required
+  a little screw-tightening
+  on the Nikon side
+  in 2 years
+  of service.
+
+The Metabones adapter has served me well
+over the past couple of years,
+but when talking to people about my switch,
+I got curious how this adapter compared
+to less expensive adapters.
+
+.K&F Concepts Adapter
+In July 2016,
+I purchased the http://amzn.to/2iQoRV0[K&F Concepts Adapter]
+to compare to the Metabones that I definitely liked.
+I used it for a couple months almost exclusively
+and found it to feel solid
+and to work fine
+with only a bit of adjustment
+in my expectations
+of the distance to turn the ring.
+
+* Costs about $20.
+* Physically sets the aperture on my Nikon G lenses.
+* Aperture ring throws a very short distance,
+  about 20 degrees
+  from wide-open to fully stopped down.
+* No marks for the stops.
+* Clicking at each stop,
+  so it's basically impossible
+  to set part stops.
+  (This is OK, though,
+  since I like to think in full stops anyway.)
+* No tripod mount,
+  but my larger lenses
+  have their own tripod collars.
+  (For a short lens,
+  sometimes I like to switch back to the Metabones
+  for its tripod mount.)
+* Made completely of metal.
+* Solid connection to camera and lens.
+* No service or modifications needed yet.
+
+In the end,
+The K&F adapter
+surprised me
+with its build quality,
+and it feels good to use.
+I was surprised to find the short
+throw wasn't an issue for my shooting,
+but I do miss the tripod mount
+on occasion.
+It's always good
+to have some backup gear,
+and switching between these 2
+was easy.
+
+For the money,
+I'd have no trouble recommending
+the K&F or something similar
+to purchase first,
+and upgrade to the Metabones
+only if you find
+that you need the extra features.
