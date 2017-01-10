@@ -118,7 +118,7 @@ they're spinning Drum n Bass all night.
 
 == Rosie the Riveter
 image::{site_host}images/2016/rosie_the_riveter.jpg[role="narrower"]
-Marie had a great Halloween costume
+Marie had a great Halloween costume,
 and it deserved to be captured
 in one of my favorite images
 of the year.
