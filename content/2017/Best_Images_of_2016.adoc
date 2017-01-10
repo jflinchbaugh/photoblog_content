@@ -1,5 +1,5 @@
 title=Best Images of 2016
-date=2017-01-09
+date=2017-01-10
 type=post
 status=published
 tags=Photography, 2016
@@ -16,6 +16,16 @@ and winnowed it down
 to 10 in about 30 minutes.
 (With that sort of momentum,
 I'm lucky I had any photos left to show!)
+
+It's been a year
+of photographing people.
+While toys, macros, and nature
+may have gone _into_ the process,
+those images didn't compete
+with the all the interesting people.
+My photographic lighting style
+also continude to show up
+in more images than not.
 
 == Curiouser and Curiouser
 image::{site_host}images/2016/curiouser_and_curiouser.jpg[]
