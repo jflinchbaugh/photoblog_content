@@ -5,38 +5,38 @@ status=published
 tags=Photography, 2015
 ~~~~~~
 I've taken a few hard moments
-and collected my favorite 10 images 
-from all of 2015.  
+and collected my favorite 10 images
+from all of 2015.
 My first pass yielded 101 images,
 and I pared it down from there
 over a couple hours.
 
-_Ten_ is a hard number when looking 
+_Ten_ is a hard number when looking
 at a year of images.
 It leaves me with the feeling
-that I left out some aspects 
+that I left out some aspects
 of my photography,
 but that's part of the exercise --
 Which aspects are excelling?
 I exposed a sensor over 50k times,
 shared over 1800 shots on Facebook,
-and showed nearly 250 on Flickr. 
-footnote:[Counting images for the year was fun: 
-a shell script to rip through exif data 
-for 2 cameras to find the image numbers 
-for each raw image, 
-rough counting of pages on Facebook, 
-and clicking "Select All" on every day 
+and showed nearly 250 on Flickr.
+footnote:[Counting images for the year was fun:
+a shell script to rip through exif data
+for 2 cameras to find the image numbers
+for each raw image,
+rough counting of pages on Facebook,
+and clicking "Select All" on every day
 of images in 2015 on Flickr's Camera Roll.]
 
 == The Orb at Ardmore
 image::{site_host}images/2015/orb.jpg[]
-The Orb, 
-the legendary ambient musicians, 
+The Orb,
+the legendary ambient musicians,
 put on an amazing show
 near Philadelphia this year.
 I had my one speedlight as usual,
-and I happened to have tucked it 
+and I happened to have tucked it
 into a stack of chairs behind a curtain on stage right.
 Right before The Orb took the stage,
 a publicist or someone came
@@ -66,8 +66,8 @@ and they always seem to appreciate seeing photos from the nights.
 
 == Playing with Fire in God's Basement
 image::{site_host}images/2015/fire.jpg[]
-This year, I got brave and ventured out again 
-to longer nights, 
+This year, I got brave and ventured out again
+to longer nights,
 like Big Dub out in the woods
 and God's Basement Reunion outside Philadelphia.
 It was the first party in a newly reclaimed warehouse
@@ -75,7 +75,7 @@ now called _The Arts Garage: Waterfront_.
 
 == Neon Kaleidscope
 image::{site_host}images/2015/nk5.jpg[]
-The Neon Kaleidoscope (previously Pure) crew 
+The Neon Kaleidoscope (previously Pure) crew
 celebrated 5 years in 2015.
 I had just seen an exhibition
 of Richard Avadon's "Family Affair" series,
@@ -84,7 +84,7 @@ stitching to make a wide image to capture
 everyone at one of Neon Kaleidoscope's biggest nights.
 
 == DJ Diesel
-image::{site_host}images/2015/diesel.jpg[]
+image::{site_host}images/2015/diesel.jpg[role="narrower"]
 Jay and I have been splashing light
 around the Lizard Lounge for quite some time now.
 
@@ -95,7 +95,7 @@ the gear and other environmental stuff
 from raves. I love the gesture in this image.
 
 == Nell at Lizard Lounge
-image::{site_host}images/2015/nell.jpg[]
+image::{site_host}images/2015/nell.jpg[role="narrower"]
 I shot many of my favorite images
 at Lizard Lounge this year.
 This image resulted from a quick
@@ -115,9 +115,9 @@ since I knew others would be making amazing images.
 == Fiesta
 image::{site_host}images/2015/fiesta.jpg[]
 I love photographing toys,
-and my bright green Ford Fiesta 
-is my favorite car I've had, 
-so it only makes sense for me 
+and my bright green Ford Fiesta
+is my favorite car I've had,
+so it only makes sense for me
 to have a tiny replica of the car.
 I had wanted to shoot this image for a couple years.
 

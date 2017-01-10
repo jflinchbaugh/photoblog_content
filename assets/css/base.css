@@ -54,3 +54,8 @@ code {
 .clear-fix {
     clear: both;
 }
+
+.narrower {
+    width: 50%;
+    margin: auto;
+}
