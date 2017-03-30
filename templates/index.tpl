@@ -4,7 +4,7 @@ layout(
     pageTitle: 'Blog',
     alltags: alltags,
     bodyContents: contents {
-        published_posts.take(20).each { post ->
+        published_posts.take(5).each { post ->
             a(href: post.uri) {
                 h1(post.title)
             }
