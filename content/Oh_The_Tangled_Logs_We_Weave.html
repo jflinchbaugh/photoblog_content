@@ -1,9 +1,0 @@
-title=Oh The Tangled Logs We Weave
-date=2006-07-21 15:03:31.326
-type=post
-status=published
-tags=Java, Web Dev, Computers
-~~~~~~
-<p>My install of <a href = "http://blojsom.sf.net/">Blojsom</a> seems to have its own copy of log4j and properties.  I never recognized previously that all my logs from Blojsom were double-wrapped.  Blojsom spit them out to STDOUT, and JBoss routed STDOUT to server.log.</p>
-<p>This would definitely qualify as an unnecessary overhead on an already limited server.  I removed Blojsom's log4j jar and properties, and configured JBoss to limit Blojsom messages to INFO, so that should be a bit simpler.</p>
-<p>While I dug around in there, I also removed Blojsom's CompressionFilter from the web.xml, and cut the OSCache down to 100 objects, since there's not really many weblogs on the server.  I already have the Apache proxy doing compression.</p>

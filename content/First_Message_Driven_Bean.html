@@ -1,8 +1,0 @@
-title=First Message Driven Bean
-date=2004-05-21 12:14:23.426
-type=post
-status=published
-tags=Java, Blog Code
-~~~~~~
-<p>I just implemented my first simple message-driven bean.  It's the shell of a trackback ping service which will be used to asynchronously (in the background) ping a weblog to which I'm replying.  Right now it just prints parts of the article to the log, sleeps, prints some more -- just enough to see it's running in the background concurrently.</p>
-<p>It'll be a while until you see it here in the production code, since I've not implemented or figured out actually trackback functionality yet, and I'm in the middle of refactoring my Struts actions out into seperate logic beans, so I can eliminate some chaining.  I think I'm learning enough to be dangerous at work though.</p>

@@ -1,8 +1,0 @@
-title=DVD Burner Minimum Requirements
-date=2005-04-13 09:24:06.269
-type=post
-status=published
-tags=Technology, Computers, Linux, Home
-~~~~~~
-<p>I bought a Sony DVD burner a couple weeks ago, and the box said it minimally required an 800MHz Pentium 3, but recommended a 1.6GHz Pentium 4 to function.  This is obviously for the software, so one must wonder on what you <em>really</em> need, and what is that other software doing that requires so much processor?</p>
-<p>Well, I have it working pretty reliably burning DVD+RWs for backups in my 200MHz Classic Pentium.  I use <code>growisofs</code> to do the burn, which creates the image on the fly and streams it to the media.  The CPU usage hovers around 50%, so it's not starved for CPU.  Having the source files on SCSI disks and the burner on a dedicated IDE bus probably helps.  When starting the burn, it does claim that it wants to burn at 4x, but in the end only did about 1.8x.  I'll have to try some plain DVD+-R discs and see if it can go faster.</p>
