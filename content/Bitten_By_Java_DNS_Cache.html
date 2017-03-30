@@ -1,9 +1,0 @@
-title=Bitten By Java DNS Cache
-date=2006-01-17 13:25:02.212
-type=post
-status=published
-tags=Blog Code, Linux, Java, Computers
-~~~~~~
-<p>Today I realized that my <a href = "http://weblogs.hjsoft.com/blojsom/blog/john/">moblog</a> no longer received updates and immediately recognized from the connection exceptions in the logs that the <a href = "http://www.hjsoft.com/blog/link/Javas_DNS_Cache">DNS cache in Java</a> was responsible.</p>
-<p>I moved my mail server to a new IP several days ago, but Tomcat never picked up on it, because the JVM maintained its own cache which ignored my defined DNS TTL.</p>
-<p>I restarted Tomcat to get it to forget the old IP, and this time I configured away the DNS cache (<code>-Dsun.net.inetaddr.ttl=0</code>).</p>

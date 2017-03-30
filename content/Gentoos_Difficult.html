@@ -1,8 +1,0 @@
-title=Gentoo's Difficult
-date=2005-04-06 08:51:16.639
-type=post
-status=published
-tags=Computers, Linux
-~~~~~~
-<p>Every time I think I get this thing working, it proves me wrong.  I did an <code>emerge -uDv world</code>, and it updated to a new version of binutils.  Of course, after that, none of the binutils are found, so all subsequent upgrades fail, because obviously, gcc can no longer produce binaries.  I eventually found that they were hidden away somewhere and that running <code>binutils-config</code> and reselecting the current profile produced proper symlinks to make it all work again.  The profile was the only one available, and apparently already selected, but it just didn't take the first time, apparently.</p>
-<p>Reading the <a href = "http://forums.gentoo.org/">Gentoo forums</a>, it seems that when people break their machines, they often end up resorting to rebuilding a package on alternate gentoo boxes that they've not yet broken.  Having this dependency upon an always fully functioning build system seems like a pretty high standard and fragile.</p>

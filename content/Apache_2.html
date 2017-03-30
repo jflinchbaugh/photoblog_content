@@ -1,8 +1,0 @@
-title=Apache 2
-date=2004-04-02 09:36:24.032
-type=post
-status=published
-tags=Linux
-~~~~~~
-<p>I now have Apache 2 running on the server.  It does many of the webpages and proxies to JBoss and Tomcat servers around the box.  If you notice any troubles, please let me know.  Thanks.</p>
-<p><b>Update (09:36):</b> I had some things broken.  It seems none of the proxied sites were working from the outside world.  I had to change my &lt;Directory proxy:${url}&gt; directives into &lt;Proxy url&gt; directives.  I apologize for any inconveniences.</p>

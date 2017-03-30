@@ -1,9 +1,0 @@
-title=RSSing up the Weblog
-date=2007-04-11 16:15:16.61
-type=post
-status=published
-tags=Computers, Java, Technology, Blog Code
-~~~~~~
-<p>I was previously using an old RSS library from Churchill Objects (maybe gone now?).  I had hacked it up a bit to make it produce more compliant feeds from this weblog.</p>
-<p>I was originally planning to replace it with a template of my own done in JSP or something (similar to what I saw Blojsom do), but decided instead to give <a href = "https://rome.dev.java.net/">ROME</a> a shot.  It seems to be pretty widely used already, and it would provide me easy facilities to produce <em>and consume</em> other feed types.  Integrating other feeds into the weblog is another near future goal of mine.</p>
-<p>Porting was pretty simple, since ROME has a very familiar object model for a feed.  ROME's now producing my old article feeds, plus I pretty quickly added a feed for latest comments.  I hope to abstract this process further to allow me to add feeds for just about anything I want in the minimal time.  ROME has the added benefit of seeming to be actively maintained.  It's been a good experience so far, and I look forward to using it for loftier goals.</p>
