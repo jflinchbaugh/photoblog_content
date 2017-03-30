@@ -1,4 +1,4 @@
-# John Flinchbaugh Blog with JBake
+# John Flinchbaugh Photo Blog with JBake
 
 To build:
 
