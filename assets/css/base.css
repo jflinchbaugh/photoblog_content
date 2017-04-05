@@ -4,6 +4,8 @@
 html,
 body {
   height: 100%;
+  background-color: black;
+  color: white;
   /* The html and body elements cannot have any padding or margin. */
 }
 
@@ -21,8 +23,29 @@ body {
 #footer {
   height: 60px;
 }
+
+.inverse-dropdown {
+  background-color: #222;
+  border-color: #080808;
+}
+
+.inverse-dropdown .dropdown-menu {
+  background-color: #222;
+  border-color: #080808;
+}
+.inverse-dropdown li a{
+    color: #999;
+}
+.inverse-dropdown li a:hover{
+    color: #fff;
+    background-color: #000;
+}
+.inverse-dropdown .divider {
+    background-color: #000;
+}
+
 #footer {
-  background-color: #f5f5f5;
+  /* background-color: black; */
   padding: 0;
 }
 
@@ -58,4 +81,12 @@ code {
 .narrower {
     width: 50%;
     margin: auto;
+}
+
+.subheader, #content #toctitle, .admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .videoblock > .title, .listingblock > .title, .literalblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title, .tableblock > caption {
+    color: white;
+}
+
+a {
+	color: lightblue;
 }

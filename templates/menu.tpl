@@ -1,4 +1,4 @@
-div(class: 'navbar navbar-default navbar-fixed-top', role: 'navigation') {
+div(class: 'navbar navbar-inverse navbar-fixed-top', role: 'navigation') {
     div(class: 'container') {
         div(class: 'navbar-header') {
             button(
@@ -23,7 +23,7 @@ div(class: 'navbar navbar-default navbar-fixed-top', role: 'navigation') {
                 li {
                     a(href: "${content.rootpath}archive.html", 'Archive')
                 }
-                li(class: 'dropdown') {
+                li(class: 'dropdown inverse-dropdown') {
                     a(
                         href: '#',
                         class: 'dropdown-toggle',
