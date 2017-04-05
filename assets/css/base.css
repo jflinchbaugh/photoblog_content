@@ -24,7 +24,7 @@ body {
   height: 60px;
 }
 .navbar-default, #footer {
-  background-color: #111111;
+  background-color: #222222;
   padding: 0;
 }
 
@@ -32,44 +32,9 @@ a:focus {
     color: white;
 }
 
-.navbar-default .navbar-brand {
-    color: white;
-}
-
-.navbar-default .navbar-brand:hover {
-    color: #aaaaaa;
-}
-
-.navbar-default a:hover,
-.navbar-default a:focus,
-.navbar-default .navbar-nav li a:hover,
-.navbar-default .navbar-nav li a:focus {
-    color: #aaaaaa;
-}
-
-.navbar {
-    border: 1px solid black;
-}
-
-a {
-    color: #999999;
-}
-a:hover,a:focus {
-    color: #aaaaaa;
-}
-
-.navbar-default .navbar-nav li a {
-    color: white;
-}
-
-.dropdown-menu, .dropdown, .dropdown.open {
-    color: white;
+.dropdown {
     background-color: #222222;
-}
-
-.dropdown-menu a:hover,
-.dropdown-menu a:focus {
-    color: #aaaaaa;
+    color: white;
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
