@@ -15,5 +15,5 @@ script(src: "${content.rootpath}js/html5shiv.min.js")
 yieldUnescaped '<![endif]-->'
 link(
     rel: 'shortcut icon',
-    href: "${content.rootpath}moon.png"
+    href: "${content.rootpath}smiley.png"
 )
