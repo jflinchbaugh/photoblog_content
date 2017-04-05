@@ -15,7 +15,7 @@ div(class: 'navbar navbar-inverse navbar-fixed-top', role: 'navigation') {
             a(
                 class: 'navbar-brand',
                 href: "${content.rootpath}index.html",
-                'John Flinchbaugh'
+                config.blog_title
             )
         }
         div(class: 'navbar-collapse collapse') {
