@@ -21,6 +21,13 @@ div(class: 'navbar navbar-inverse navbar-fixed-top', role: 'navigation') {
         div(class: 'navbar-collapse collapse') {
             ul(class: 'nav navbar-nav') {
                 li {
+                    a(
+                        href: 'http://photography.johnflinchbaugh.com/index',
+                        target: '_blank',
+                        'Images'
+                    )
+                }
+                li {
                     a(href: "${content.rootpath}archive.html", 'Archive')
                 }
                 li(class: 'dropdown inverse-dropdown') {
