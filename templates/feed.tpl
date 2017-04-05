@@ -26,13 +26,13 @@ rss(version: '2.0', 'xmlns:atom': 'http://www.w3.org/2005/Atom') {
                 }
                 newLine()
                 link {
-                    yield "${config.site_host}/${post.uri}"
+                    yield "${config.site_host}${post.uri}"
                 }
                 newLine()
                 pubDate(post.date.format('EEE, d MMM yyyy HH:mm:ss Z'))
                 newLine()
                 guid(isPermaLink: 'false') {
-                    yield post.uri
+                    yield "${config.site_host}${post.uri}"
                 }
                 newLine()
                 description {
