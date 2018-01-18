@@ -8,12 +8,9 @@ layout(
             a(href: post.uri) {
                 h1(post.title)
             }
-            p(
-                new java.text.SimpleDateFormat(
-                    'dd MMMM yyyy',
-                    Locale.ENGLISH
-                ).format(post.date)
-            )
+            p {
+                em(post.date.format('dd MMMM yyyy'))
+            }
             p(post.body)
             hr(class: 'clear-fix', '')
         }
