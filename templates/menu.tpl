@@ -43,7 +43,7 @@ div(class: 'navbar navbar-inverse navbar-fixed-top', role: 'navigation') {
                         li {
                             div(class: 'row', style: 'width: 20em') {
                                 def tags = alltags.collect().toSorted()
-                                def half = tags.size() / 2 + 1
+                                def half = (tags.size() / 2 + 1) as Integer
                                 div(class: 'col-xs-6') {
                                     ul(class: 'list-unstyled') {
                                         tags.take(half).each { t ->
