@@ -1,26 +1,17 @@
 title=Best Images of 2017
-date=2019-11-19
+date=2019-11-18
 type=post
 status=published
 tags=Photography, 2017
 ~~~~~~
 
 image::{site_context}images/2017/best-2017-01.jpg[]
-
-image::{site_context}images/2017/best-2017-02.jpg[]
-
-image::{site_context}images/2017/best-2017-03.jpg[]
-
-image::{site_context}images/2017/best-2017-04.jpg[]
-
+image::{site_context}images/2017/best-2017-02.jpg[role = "narrower"]
+image::{site_context}images/2017/best-2017-03.jpg[role = "narrower"]
+image::{site_context}images/2017/best-2017-04.jpg[role = "narrower"]
 image::{site_context}images/2017/best-2017-05.jpg[]
-
 image::{site_context}images/2017/best-2017-06.jpg[]
-
-image::{site_context}images/2017/best-2017-07.jpg[]
-
+image::{site_context}images/2017/best-2017-07.jpg[role = "narrower"]
 image::{site_context}images/2017/best-2017-08.jpg[]
-
 image::{site_context}images/2017/best-2017-09.jpg[]
-
-image::{site_context}images/2017/best-2017-10.jpg[]
+image::{site_context}images/2017/best-2017-10.jpg[role = "narrower"]

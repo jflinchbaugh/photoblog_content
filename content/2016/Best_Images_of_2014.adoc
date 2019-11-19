@@ -12,13 +12,13 @@ This was slightly harder than
 the exercise for 2015 for some reason.
 
 
-image::{site_host}images/2014/briana_multiply.jpg[]
-image::{site_host}images/2014/cold.jpg[]
-image::{site_host}images/2014/aleesha.jpg[]
-image::{site_host}images/2014/elsewhere.jpg[]
-image::{site_host}images/2014/fire.jpg[]
-image::{site_host}images/2014/cosmic.jpg[]
-image::{site_host}images/2014/funkbot.jpg[]
-image::{site_host}images/2014/joy.jpg[]
-image::{site_host}images/2014/bench.jpg[]
-image::{site_host}images/2014/aikido.jpg[]
+image::{site_context}images/2014/briana_multiply.jpg[]
+image::{site_context}images/2014/cold.jpg[]
+image::{site_context}images/2014/aleesha.jpg[]
+image::{site_context}images/2014/elsewhere.jpg[]
+image::{site_context}images/2014/fire.jpg[role = "narrower"]
+image::{site_context}images/2014/cosmic.jpg[role = "narrower"]
+image::{site_context}images/2014/funkbot.jpg[role = "narrower"]
+image::{site_context}images/2014/joy.jpg[]
+image::{site_context}images/2014/bench.jpg[]
+image::{site_context}images/2014/aikido.jpg[]
