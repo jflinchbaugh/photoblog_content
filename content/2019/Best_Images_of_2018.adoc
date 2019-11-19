@@ -1,0 +1,17 @@
+title=Best Images of 2018
+date=2019-11-19
+type=post
+status=published
+tags=Photography, 2018
+~~~~~~
+
+image::{site_context}images/2018/best-2018-01.jpg[role = "narrower"]
+image::{site_context}images/2018/best-2018-02.jpg[]
+image::{site_context}images/2018/best-2018-03.jpg[]
+image::{site_context}images/2018/best-2018-04.jpg[role = "narrower"]
+image::{site_context}images/2018/best-2018-05.jpg[]
+image::{site_context}images/2018/best-2018-06.jpg[role = "narrower"]
+image::{site_context}images/2018/best-2018-07.jpg[role = "narrower"]
+image::{site_context}images/2018/best-2018-08.jpg[role = "narrower"]
+image::{site_context}images/2018/best-2018-09.jpg[]
+image::{site_context}images/2018/best-2018-10.jpg[role = "narrower"]
