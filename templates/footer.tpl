@@ -5,7 +5,7 @@ div(id: 'footer') {
                 &copy; John Flinchbaugh
                 2003&ndash;${new Date().format('yyyy')}
             """
-            yieldUnescaped ' | Baked with '
+            yieldUnescaped " | Baked on ${new Date().format('yyyy-MM-dd')} with "
             a(href: 'http://jbake.org/', "JBake ${version}")
             yieldUnescaped ' &amp; '
             a(href: 'http://getbootstrap.com/', 'Bootstrap v3.1.1')
