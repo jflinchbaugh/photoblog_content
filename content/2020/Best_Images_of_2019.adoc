@@ -1,0 +1,17 @@
+title=Best Images of 2019
+date=2020-01-11
+type=post
+status=published
+tags=Photography, 2019
+~~~~~~
+
+image::{site_context}images/2019/best-2019-01.jpg[role = "narrower"]
+image::{site_context}images/2019/best-2019-02.jpg[]
+image::{site_context}images/2019/best-2019-03.jpg[role = "narrower"]
+image::{site_context}images/2019/best-2019-04.jpg[role = "narrower"]
+image::{site_context}images/2019/best-2019-05.jpg[]
+image::{site_context}images/2019/best-2019-06.jpg[]
+image::{site_context}images/2019/best-2019-07.jpg[role = "narrower"]
+image::{site_context}images/2019/best-2019-08.jpg[role = "narrower"]
+image::{site_context}images/2019/best-2019-09.jpg[role = "narrower"]
+image::{site_context}images/2019/best-2019-10.jpg[role = "narrower"]
