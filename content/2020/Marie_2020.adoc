@@ -8,10 +8,10 @@ tags=Family,2020
 It's hard to believe 
 it's Marie's senior year.
 
-image::{site_context}images/2020/marie-1.jpg[]
-image::{site_context}images/2020/marie-2.jpg[]
-image::{site_context}images/2020/marie-3.jpg[role = "narrower"]
-image::{site_context}images/2020/marie-4.jpg[]
-image::{site_context}images/2020/marie-5.jpg[role = "narrower"]
-image::{site_context}images/2020/marie-6.jpg[role = "narrower"]
+image::{site_context}images/2020/marie/marie-1.jpg[]
+image::{site_context}images/2020/marie/marie-2.jpg[]
+image::{site_context}images/2020/marie/marie-3.jpg[role = "narrower"]
+image::{site_context}images/2020/marie/marie-4.jpg[]
+image::{site_context}images/2020/marie/marie-5.jpg[role = "narrower"]
+image::{site_context}images/2020/marie/marie-6.jpg[role = "narrower"]
 
