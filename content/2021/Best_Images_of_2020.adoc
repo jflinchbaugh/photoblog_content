@@ -1,0 +1,23 @@
+title=Best Images of 2020
+date=2021-01-07
+type=post
+status=published
+tags=Photography, 2020
+~~~~~~
+
+Not a whole lot of photography happened in 2020,
+but I made some images that are meaningful to me.
+I made it to a party or two,
+traveled to Las Vegas with Emily,
+and made senior portraits for Marie.
+
+image::{site_context}images/2020/best/best-2020-1.jpg[]
+image::{site_context}images/2020/best/best-2020-2.jpg[]
+image::{site_context}images/2020/best/best-2020-3.jpg[role = "narrower"]
+image::{site_context}images/2020/best/best-2020-4.jpg[role = "narrower"]
+image::{site_context}images/2020/best/best-2020-5.jpg[]
+image::{site_context}images/2020/best/best-2020-6.jpg[]
+image::{site_context}images/2020/best/best-2020-7.jpg[role = "narrower"]
+image::{site_context}images/2020/best/best-2020-8.jpg[role = "narrower"]
+image::{site_context}images/2020/best/best-2020-9.jpg[role = "narrower"]
+image::{site_context}images/2020/best/best-2020-10.jpg[role = "narrower"]
