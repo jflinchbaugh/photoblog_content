@@ -8,7 +8,9 @@ tags=Photography,360,Insta360
 I've been using the Insta360 X3
 for a https://www.youtube.com/@JohnFlinchbaugh/videos[couple months],
 and I'm settling
-into an optimal workflow.
+into an optimal workflow
+for processing all the video
+on my phone.
 Initially,
 I'd shoot hours of video straight
 and try to edit it,
@@ -18,7 +20,7 @@ of challenges:
 * It requires a very large SD card.
 * It burns lots of battery.
 * It leaves me with hours of video to review and process.
-* Hours of video in Insta360's mobile app causes slowdown
+* Hours of video in Insta360's mobile app cause slowdown
   and crashes when editing a huge "Story".
 
 Currently I've been taking the recent approach:
@@ -35,16 +37,22 @@ Currently I've been taking the recent approach:
   from a power bank
   to keep the camera running
   longer than 45 minutes.
+  The cable runs down the side
+  of the camera,
+  so mostly disappears
+  in the stitch line.
 * I only capture the interesting bits.
   I put the camera in "Loop Recording" mode keeping 1-minute clips.
   When I see something I want to keep,
   I stop the recording to keep the loop of the last minute or 2,
-  and immediately restart the recording.
+  and I'll immediately restart the recording.
   This leaves me with usually 20-40 small clips.
 * I leave the gigabytes of video on the camera,
   and connect the mobile app running on my phone
   to the camera via Bluetooth and WiFi Direct.
-* I process each small clip from newest to oldest:
+* I process each small clip from newest to oldest,
+  since I usually get better
+  at picking clips as I ride:
 ** I open each individual clip,
   and I see if there's anything there worth keeping.
   I delete it if I don't see anything good,
@@ -61,7 +69,7 @@ Currently I've been taking the recent approach:
   of short clips in chronological order.
   They're already trimmed and reframed,
   so I see how the clips flow,
-  add trim or delete even further,
+  and trim or delete even further,
   and maybe add a transition or two between clips.
 * After many passes of trimming the clips
   that comprise a story,
@@ -74,7 +82,7 @@ I try to keep the videos
 as short as possible,
 since no one wants to watch
 a boring 20 minutes.
-I'll also likely also export
+I'll also likely export
 a single clip or two
 as highlights to upload
 to https://www.instagram.com/johnflinchbaugh/[Instagram].
