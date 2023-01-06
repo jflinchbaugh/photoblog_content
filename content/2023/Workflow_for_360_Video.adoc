@@ -14,14 +14,16 @@ I'd shoot hours of video straight
 and try to edit it,
 but this offered _lots_
 of challenges:
-. It requires a very large SD card.
-. It burns lots of battery.
-. It leaves me with hours of video to review and process.
-. Hours of video in Insta360's mobile app causes slowdown
+
+* It requires a very large SD card.
+* It burns lots of battery.
+* It leaves me with hours of video to review and process.
+* Hours of video in Insta360's mobile app causes slowdown
   and crashes when editing a huge "Story".
 
 Currently I've been taking the recent approach:
-. I mount the camera
+
+* I mount the camera
   on the selfie stick attached
   to my bicycle handlebars
   or a strap on my chest,
@@ -33,27 +35,27 @@ Currently I've been taking the recent approach:
   from a power bank
   to keep the camera running
   longer than 45 minutes.
-. I only capture the interesting bits.
+* I only capture the interesting bits.
   I put the camera in "Loop Recording" mode keeping 1-minute clips.
   When I see something I want to keep,
   I stop the recording to keep the loop of the last minute or 2,
   and immediately restart the recording.
   This leaves me with usually 20-40 small clips.
-. I leave the gigabytes of video on the camera,
+* I leave the gigabytes of video on the camera,
   and connect the mobile app running on my phone
   to the camera via Bluetooth and WiFi Direct.
-. I process each small clip from newest to oldest:
-  . I open each individual clip,
-    and I see if there's anything there worth keeping.
-    I delete it if I don't see anything good,
-    so I don't need to process it later.
-  . For the bit in the file that's worth keeping,
-    I reframe it in the app.
-  . Then I aggressively trim
-    the video to be 4-20 seconds long
-    using the "jump cut" feature
-    in the trim tool.
-. Once all the clips are ready,
+* I process each small clip from newest to oldest:
+** I open each individual clip,
+  and I see if there's anything there worth keeping.
+  I delete it if I don't see anything good,
+  so I don't need to process it later.
+** For the bit in the file that's worth keeping,
+  I reframe it in the app.
+** Then I aggressively trim
+  the video to be 4-20 seconds long
+  using the "jump cut" feature
+  in the trim tool.
+* Once all the clips are ready,
   I create a new "Story"
   and start adding batches
   of short clips in chronological order.
@@ -61,7 +63,7 @@ Currently I've been taking the recent approach:
   so I see how the clips flow,
   add trim or delete even further,
   and maybe add a transition or two between clips.
-. After many passes of trimming the clips
+* After many passes of trimming the clips
   that comprise a story,
   I can export the resulting video,
   usually only a few minutes in length,
