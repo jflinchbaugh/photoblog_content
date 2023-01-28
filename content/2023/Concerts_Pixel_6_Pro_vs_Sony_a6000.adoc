@@ -1,0 +1,56 @@
+title=Concerts: Pixel 6 Pro vs Sony a6000
+date=2023-01-28
+type=post
+status=published
+tags=Photography
+~~~~~~
+I've been photographing
+clubs, local concerts,
+and everything else
+in an amateur capacity
+with my array of Sony a6000 cameras
+for over 8 years.
+That camera technology is old
+but it serves me well.
+
+I've also been photographing
+more recently
+with my Pixel 6 Pro.
+The 3 lenses of different focal length
+and the digital zoom
+are surprisingly capable.
+The software
+does a really nice job
+cleaning up noise
+in low light
+most the time
+or picking the cleanest shot
+of a sequence.
+
+Below I show 2 photos
+from the real camera
+and 2 images
+from the phone.
+Looking close
+on a big screen,
+I can tell the difference,
+but it's pretty good.
+Having seen how
+the phone deals
+with image noise,
+I learned
+I can get away
+with some heavier noise reduction
+in my camera images.
+ 
+image::{site_context}images/2023/a6000-1.jpg[]
+link:{site_context}images/2023/a6000-1.jpg[full resolution,window=_blank]
+
+image::{site_context}images/2023/a6000-2.jpg[]
+link:{site_context}images/2023/a6000-2.jpg[full resolution,window=_blank]
+
+image::{site_context}images/2023/pixel-1.jpg[]
+link:{site_context}images/2023/pixel-1.jpg[full resolution,window=_blank]
+
+image::{site_context}images/2023/pixel-2.jpg[role="narrower"]
+link:{site_context}images/2023/pixel-2.jpg[full resolution,window=_blank]
