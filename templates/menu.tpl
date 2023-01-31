@@ -22,7 +22,7 @@ div(class: 'navbar navbar-inverse navbar-fixed-top', role: 'navigation') {
             ul(class: 'nav navbar-nav') {
                 li {
                     a(
-                        href: 'http://photography.johnflinchbaugh.com/index',
+                        href: 'https://photography.johnflinchbaugh.com/',
                         target: '_blank',
                         'Images'
                     )
