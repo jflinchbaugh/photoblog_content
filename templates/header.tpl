@@ -10,6 +10,12 @@ link(rel: 'stylesheet', href: "${content.rootpath}css/bootstrap.min.css")
 link(rel: 'stylesheet', href: "${content.rootpath}css/asciidoctor.css")
 link(rel: 'stylesheet', href: "${content.rootpath}css/base.css")
 link(rel: 'stylesheet', href: "${content.rootpath}css/prettify.css")
+link(
+  rel: 'alternate',
+  type: 'application/atom+xml',
+  title: "${config.blog_title}: Atom Feed",
+  href: "${content.rootpath}feed.xml",
+)
 yieldUnescaped '<!--[if lt IE 9]>'
 script(src: "${content.rootpath}js/html5shiv.min.js")
 yieldUnescaped '<![endif]-->'
