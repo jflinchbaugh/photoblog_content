@@ -1,0 +1,34 @@
+title=Insta360 Updates
+date=2023-05-15
+type=post
+status=published
+tags=Video,Insta360
+~~~~~~
+
+I continue to
+link:{site_context}2023/Workflow_for_360_Video.html[use the Insta360]
+on my bicycle
+and the Android app
+to process the video.
+
+The application is getting much better
+with each recent update:
+
+* It's started exporting
+  from the phone up to 1440p.
+* I don't think I've seen any crashes
+  for a while.
+* When building a story,
+  I can select
+  the max number
+  of clips to import,
+  and when I come
+  back for more,
+  _it now indicates which
+  were already imported_,
+  so I can easily
+  find the remaining clips.
+* I just found a selector
+  that allows me to choose "HD"
+  or "Quick" preview
+  while working with the video.
