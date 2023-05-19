@@ -50,12 +50,10 @@ Currently I've been taking the recent approach:
 * I leave the gigabytes of video on the camera,
   and connect the mobile app running on my phone
   to the camera via Bluetooth and WiFi Direct.
-* I process each small clip from newest to oldest,
-  since I usually get better
-  at picking clips as I ride:
+* I process each small clip from oldest to newest:
 ** I open each individual clip,
   and I see if there's anything there worth keeping.
-  I delete it if I don't see anything good,
+  I delete it if I don't recognize anything notable,
   so I don't need to process it later.
 ** For the bit in the file that's worth keeping,
   I reframe it in the app.
