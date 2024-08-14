@@ -16,7 +16,7 @@ html(lang: 'en') {
         newLine()
         include template: 'footer.tpl'
         newLine()
-        script(src: "${content.rootpath}js/jquery-3.6.4.min.js", '') newLine()
+        script(src: "${content.rootpath}js/jquery-3.7.1.min.js", '') newLine()
         script(src: "${content.rootpath}js/bootstrap.min.js", '') newLine()
         script(src: "${content.rootpath}js/prettify.js", '') newLine()
     }
